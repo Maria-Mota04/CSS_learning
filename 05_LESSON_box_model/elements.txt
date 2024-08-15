@@ -1,0 +1,30 @@
+SIZE:
+
+box-sizing: sets how the total width and height of an element is calculated
+            1- content-box: default,  If you set an element's width to 100 pixels, 
+            then the element's content box will be 100 pixels wide, and the width of any border or 
+            padding will be added to the final rendered width, making the element wider than 100px.
+
+            2- BORDER-BOX(BEST ONE):  tells the browser to account for any border and padding
+             in the values you specify for an element's width and height.
+             SO IF YOU SET AN ELEMENT'S WIDTH TO 100 PIXELS,
+              THAT 100 PIXELS WILL INCLUDE ANY BORDER OR PADDING YOU ADDED -> DOES NOT INCLUDE MARGIN, CAUSE 
+              THAT IS OUTSIDE, OR OUTLINE
+
+AROUND LINE:
+
+border: width, style, color EX:  thick double #32a1ce; there are also sides like the bellow ones (NOT INHERITED)
+outline: width, style, color EX: 3px solid green; -> DONT TAKE UP SPACE INSIDE, GOES OUTSIDE,!= BORDER(NOT INHERITED)
+    L> I can also have an outline - offset, that gives me a distance of the line from our box,
+     I can use negative values to get inside the box
+
+
+
+AROUND SPACE:
+
+padding: top, right, bottom, left == top bottom, left right == top, right left, bottom; if its a percentage -> relative to inline size 
+L> creates extra space within an element.(NOT INHERITED)
+margin: same as padding -> Margins create extra space around an element != padding (NOT INHERITED)
+
+NOTE -> DOING MARGIN: x px AUTO, the auto centers the box
+

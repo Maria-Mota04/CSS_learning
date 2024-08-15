@@ -2,7 +2,8 @@ COLORS: -> I can move the top bar, to choose form rgba,hsl ,#,  and the right ba
 
 background-color: changes the whole background color, #six digits, rgba(0,0,0,transparent = 0), rgb(NOT INHERITED)
 color: font color, #RRGGBB, first two red etc, if R=R, G=G, B=B, #FF0000 = #F00(NOT INHERITED)
-L> I can also have hsl(hue saturation lightness) and hsla (100% = white), hue = which color it is(color wheel from 0 to 360), saturation = intensity of the color I have(between full color and grey), lightness = how light or dark
+L> I can also have hsl(hue saturation lightness) and hsla (100% = white), hue = which color it is(color wheel from 0 to 360), 
+    saturation = intensity of the color I have(between full color and grey), lightness = how light or dark
 
 
 FONT:
@@ -14,16 +15,33 @@ font-family: prioritized list of one or more font family names(INHERITED)
 line-height: number | length | percentage | normal, sets the  height of a line box in horizontal (INHERITED)
 
 
-AROUND:
+AROUND LINE:
 
-border: width, style, color EX:  thick double #32a1ce; (NOT INHERITED)
-outline: width, style, color EX: 3px solid green; (NOT INHERITED) -> DONT TAKE UP SPACE INSIDE,!= BORDER
+border: width, style, color EX:  thick double #32a1ce; there are also sides like the bellow ones (NOT INHERITED)
+outline: width, style, color EX: 3px solid green; -> DONT TAKE UP SPACE INSIDE, GOES OUTSIDE,!= BORDER(NOT INHERITED)
+    L> I can also have an outline - offset, that gives me a distance of the line from our box,
+     I can use negative values to get inside the box
+
+
+AROUND SPACE:
+
+padding: top, right, bottom, left == top bottom, left right == top, right left, bottom; if its a percentage -> relative to inline size 
+L> creates extra space within an element.(NOT INHERITED)
+margin: same as padding -> Margins create extra space around an element != padding (NOT INHERITED)
+
+NOTE -> DOING MARGIN: x px AUTO, the auto centers the box
 
 
 
 MULTI:
 
 background: color, image, origin, size, repeat-method, attachment, clip, position
+
+SIZE:
+box-sizing: sets how the total width and height of an element is calculated
+            1- content-box -  default, is i say box = 100px, it will add border and padding, so it will be bigger   
+            2- border-box - best one, if i say box = 100px, it will account the border and padding (use in css reset)
+                L> doesnt include margin cause that is outside or outline
 
 
 
@@ -79,7 +97,7 @@ The cascade in CSS determines how these styles interact, with inline styles typi
 
 
 -------------------------------
-CSS RESET
+CSS RESET- always reset
 
 *{
     margin: 0;
