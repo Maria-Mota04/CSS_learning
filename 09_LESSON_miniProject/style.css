@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/*css reset is first*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*styles for every member of the body so I dont repeat*/
+body {
+  margin: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+/*see what is next, it is nav, now style nav*/
+
+nav {
+  border: 2px solid #333;
+  border-radius: 2rem;
+  /*if our page is wide enough, we will center it*/
+  /*1rem to bottom*/
+  margin: 0 auto 1rem;
+  /*if the page is way too wide we will limit it to 600px*/
+  max-width: 600px;
+  font-size: 3rem;
+  line-height: 7rem;
+}
+
+/*style h2*/
+h2 {
+  padding: 1rem;
+  background-color: gold;
+  /*so it wont overflow the border*/
+  /*rounds the needed corners*/
+  border-radius: 2rem 2rem 0 0;
+}
+
+ul {
+  /*remove the dots*/
+  list-style-type: none;
+}
+li {
+  /*separate the list items*/
+  border-top: 1px solid #333;
+}
+li a {
+  /*block level elements have 100% width by default*/
+  display: block;
+  padding: 1rem;
+}
+
+/*style the links inside the list items*/
+
+/*style the opened links inside the list items*/
+li a,
+li a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+li a:hover,
+li a:focus {
+  /*hovering over the link will change the background color, because we dont want to highlight only the words i put
+  it on the li*/
+  background: #333;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+li:last-child a {
+  /*rounds the needed corners*/
+  border-radius: 0 0 2rem 2rem;
+}
