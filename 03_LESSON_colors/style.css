@@ -1,0 +1,17 @@
+body {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+
+  background-color: blue;
+  background: papayawhip;
+
+  /*font color*/
+  color: black; /*#000000 or rgb*/
+}
+
+p {
+  /*full black color, alpha = 1
+    transparent, alpha = 0*/
+  color: rgba(0, 0, 0, 1);
+}

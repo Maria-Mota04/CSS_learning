@@ -1,0 +1,83 @@
+/*to make all of out text bigger, due to the inheritance
+body is an element selector*/
+html {
+  font-size: 10px;
+}
+
+body {
+  /*inherited*/
+  font-size: 22px;
+  /*not inherited*/
+  border: 3px solid black;
+}
+main {
+  font-family: monospace;
+}
+
+/*I can group select with a comma*/
+
+h1,
+h2 {
+  color: blue;
+}
+
+/*I can have h1 h2: but this means that it is trying to style h2's inside the h1's*/
+h1 h2 {
+  color: red;
+}
+
+p {
+  color: purple;
+}
+/*Since this works like a cascade, the last one stays, unless it has more specificity*/
+p {
+  color: red;
+}
+
+/*Looking for spans inside a paragraph, but instead of doing this I can name the
+ class highlight to the span items and style highlight*/
+p span {
+  text-transform: uppercase;
+  background-color: gold;
+}
+
+/* Another selector is class
+ */
+/*CLASSES, classes are more specific than the last ones, but they can be used with multiple elements,
+because they are more specific they overrule the last ones*/
+
+.gray {
+  color: gray;
+}
+
+.highlight {
+  text-transform: uppercase;
+  background-color: gold;
+}
+
+/*ID selector, the most specific, overrules all, should avoid*/
+#second {
+  font-style: italic;
+}
+
+/*Universal selector, selects everything*/
+
+* {
+  font-family: monospace;
+}
+
+/*because they are selectors, they dont inherit, so i have to specify it*/
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  /*the !important overrides everything, avoid it*/
+  color: red !important;
+}
+
+/*I can right click and inspect a page to see the html and css, to see if I have errors, and things overridden
+Important to spot errors*/

@@ -1,0 +1,6 @@
+cascading style sheet
+
+works like a cascade, from the top to the bottom
+If I put 2 definitions for the same thing, the last one is the one that remains
+
+unless it has more specificity

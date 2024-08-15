@@ -1,0 +1,8 @@
+Definition:
+
+An elements inherits the settings from its parent elements, only some can be inherited, anything related to font and typography, alignment, etc
+are inherited, others are not
+
+ex: border isnt inherited
+
+FORM ELEMENTS DO NOT INHERIT!!!!

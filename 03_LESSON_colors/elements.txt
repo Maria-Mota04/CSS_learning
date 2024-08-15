@@ -1,0 +1,10 @@
+FONT:
+line-height: number | length | percentage | normal, sets the  height of a line box in horizontal (INHERITED)
+
+
+MULTI:
+background: color, image, origin, size, repeat-method, attachment, clip, position
+
+COLORS: -> I can move the top bar, to choose form rgba,hsl ,#,  and the right bar for the alpha parameter = transparency
+color: rbg, rbga, #RRGGBB, first two red, 2 green and 2 blue, if each pair matches, R=Retc, I can diminish the size to 3, #000
+L> I can also have hsl(hue saturation lightness) and hsla (100% = white), hue = which color it is(color wheel from 0 to 360), saturation = intensity of the color I have(between full color and grey), lightness = how light or dark

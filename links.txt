@@ -3,3 +3,10 @@ https://www.youtube.com/watch?v=0W6qz0-aDaM&list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySm
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
 
 https://developer.mozilla.org/en-US/docs/Web/CSS
+
+
+specificity calculator:
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbEthSGhJUWZudVBoRU1RMFp0YkszOV9CMjVCQXxBQ3Jtc0trejlQeDBmMWxGWmU0WDhFSHlTMDVYeEd3UDdjc04yNHVxcm4wak5MbDF1N1NQeDVWVGpyZk4wNDNpeEFXSkViUkhWODRqYU82LWZUQTlpWUczSWhzbVJPMTR0cGNYcUpzSVRBRjd6ZklYbWFSUHJDdw&q=https%3A%2F%2Fspecificity.keegan.st%2F&v=QgxkYbGr2II
+
+color contrast checker, to pick color palates:
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHhjVm1Ub2ZSdzhhWmVIdmFFY1loVTVoNFZ6UXxBQ3Jtc0trbzB2NVM1cG1FSklPcUR2TmZjOVZMSDZibHNQUU5QZVI4c1N0bjlMN2xxZ05oZm1ZUnNfcnRHb0RYTElqV1V1N3JVOG5QYmtFYkxBSF9ZYnZad1gxdGJFY2NTOG1fbWxoLTNxNlBvZzFqMTBNa19kVQ&q=https%3A%2F%2Fcoolors.co%2Fcontrast-checker%2F112a46-acc8e5&v=Ddc-IIrIot0

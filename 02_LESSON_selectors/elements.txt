@@ -1,0 +1,28 @@
+TEXT:
+font-style: ex italic(INHERITED)
+text-transform: how to capitalize an element's text(INHERITED)
+font-family: prioritized list of one or more font family names(INHERITED)
+
+COLOR:
+background-color: color of the background (NOT INHERITED)
+
+
+AROUND:
+border: width, style, color EX:  thick double #32a1ce; (NOT INHERITED)
+outline: width, style, color EX: 3px solid green; (NOT INHERITED)
+
+note -> outline differences from border:
+    Outlines never take up space, as they are drawn outside of an element's content.
+    According to the spec, outlines don't have to be rectangular, although they usually are.
+
+
+GLOBAL VALUES: ex
+
+outline: inherit; -> inherits from the parent
+outline: initial; -> resets to the initial/default value, usually none
+outline: revert; -> reverts the value of a property to what it would have been if the current stylesheet (or the current layer) didn't apply.
+outline: revert-layer; -> r essentially ignores the current cascade layer (e.g., the author stylesheet) and reverts the property to its value from the previous cascade layer.
+outline: unset; ->  Acts as inherit if the property is inheritable, otherwise acts as initial.
+
+
+
