@@ -1,0 +1,31 @@
+/*
+Typography os the way that text
+is arranged and presented
+*/
+
+/*I can import here the google fonts*/
+
+body {
+  padding: 10%;
+  /*for fontsize always use rems, the children will inherit, but forms wont inherit*/
+  font-size: 2rem;
+}
+
+/* input,
+button {
+  /*because forms dont inherit
+  font: inherit;
+} */
+
+p {
+  text-decoration: none; /*remove underline, useful for links*/
+  text-transform: capitalize; /*capitalize the first letter of each word*/
+  text-align: center; /*center the text*/
+  text-indent: 2em; /*indent the text*/
+  line-height: 1.5; /*space between lines*/
+  letter-spacing: 0.1em; /*space between letters*/
+  word-spacing: 0.2em; /*space between words*/
+
+  /*primary font, fallback font, generic font*/
+  font-family: Arial, Helvetica, sans-serif;
+}

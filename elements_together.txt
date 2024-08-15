@@ -1,18 +1,58 @@
 COLORS: -> I can move the top bar, to choose form rgba,hsl ,#,  and the right bar for the alpha parameter = transparency
 
-background-color: changes the whole background color, #six digits, rgba(0,0,0,transparent = 0), rgb(NOT INHERITED)
-color: font color, #RRGGBB, first two red etc, if R=R, G=G, B=B, #FF0000 = #F00(NOT INHERITED)
-L> I can also have hsl(hue saturation lightness) and hsla (100% = white), hue = which color it is(color wheel from 0 to 360), 
-    saturation = intensity of the color I have(between full color and grey), lightness = how light or dark
+    background-color: changes the whole background color, #six digits, rgba(0,0,0,transparent = 0), rgb(NOT INHERITED)
+    color: font color, #RRGGBB, first two red etc, if R=R, G=G, B=B, #FF0000 = #F00(NOT INHERITED)
+    L> I can also have hsl(hue saturation lightness) and hsla (100% = white), hue = which color it is(color wheel from 0 to 360), 
+        saturation = intensity of the color I have(between full color and grey), lightness = how light or dark
 
 
-FONT:
 
-font-style: ex italic (INHERITED)
-font-size
-text-transform: how to capitalize an element's text(INHERITED)
-font-family: prioritized list of one or more font family names(INHERITED)
-line-height: number | length | percentage | normal, sets the  height of a line box in horizontal (INHERITED)
+FONT:(EVERYTHING INHERITED)
+
+    font-weight: boldness
+        L> normal, bold, lighter, bolder, [1,1000](default is 400)
+
+    font-style: italic, oblique(stronger italic)(optional xdeg), normal
+
+    font-family:prioritized list of one or more font family names
+        It can have a family name and a generic family name or just the generic
+        L> main ones-> serif(default in papers), sans-serif(default in web), monospace,
+        |                    cursive, fantasy(really bold) -> usually used as fallbacks
+        |
+        (if the name has a space it need '')
+        L> I can also load from google fonts -> You can put a link(top of html) or an import(copy without
+        the script and add to css)
+
+    font-size (always use rems, remember forms wont inherit)
+    text-transform: how to capitalize an element's text(INHERITED)
+   
+
+
+TEXT:
+    text-decoration: sets the appearance of decorative lines on text (NOT INHERITED)
+        L> line(underline, line-through,...), color, style(solid,wavy,dashed...), thickness
+        L> none to remove, usefull for links
+
+    text-transform: specifies how to capitalize an element's text. (INHERTED)
+        L> none, capitalize(first letter of each word upper), uppercase, lowercase,
+         full_width(chinese, japanese, cause characters take more space),
+          full-size-kana( all small Kana characters to the equivalent full-size Kana)
+
+    text-align: sets the horizontal alignment of the inline-level content inside a block element or table-cell box. (INHERITED)
+        L> works like vertical align but in horizontal
+        L> start == left, end == right, left, right, center, justify,
+         justify-all(same as justify but forces the last line to justify), match-parent -> assuming direction: ltr;
+
+    text-indent: (GOOD FOR EM): indents the first line (INHERITED)
+
+    line-height: number | length | percentage | normal, distance between lines (INHERITED)
+        L> default 1.2
+
+    letter-spacing: spacing between text-chars (INHERITED)
+        L> px, rem, normal...
+    
+    word-spacing: same as last, but for words (INHERITED)
+
 
 
 AROUND LINE:

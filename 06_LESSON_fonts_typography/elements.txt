@@ -1,0 +1,41 @@
+TEXT:
+    text-decoration: sets the appearance of decorative lines on text (NOT INHERITED)
+        L> line(underline, line-through,...), color, style(solid,wavy,dashed...), thickness
+        L> none to remove, usefull for links
+
+    text-transform: specifies how to capitalize an element's text. (INHERTED)
+        L> none, capitalize(first letter of each word upper), uppercase, lowercase,
+         full_width(chinese, japanese, cause characters take more space),
+          full-size-kana( all small Kana characters to the equivalent full-size Kana)
+
+    text-align: sets the horizontal alignment of the inline-level content inside a block element or table-cell box. (INHERITED)
+        L> works like vertical align but in horizontal
+        L> start == left, end == right, left, right, center, justify,
+         justify-all(same as justify but forces the last line to justify), match-parent -> assuming direction: ltr;
+
+    text-indent: (GOOD FOR EM): indents the first line (INHERITED)
+
+    line-height: number | length | percentage | normal, distance between lines (INHERITED)
+        L> default 1.2
+
+    letter-spacing: spacing between text-chars (INHERITED)
+        L> px, rem, normal...
+    
+    word-spacing: same as last, but for words (INHERITED)
+
+
+FONT:(EVERYTHING INHERITED)
+
+    font-weight: boldness
+        L> normal, bold, lighter, bolder, [1,1000](default is 400)
+
+    font-style: italic, oblique(stronger italic)(optional xdeg), normal
+
+    font-family: It can have a family name and a generic family name or just the generic
+        L> main ones-> serif(default in papers), sans-serif(default in web), monospace,
+        |                    cursive, fantasy(really bold) -> usually used as fallbacks
+        |
+        (if the name has a space it need '')
+        L> I can also load from google fonts -> You can put a link(top of html) or an import(copy without
+        the script and add to css)
+
