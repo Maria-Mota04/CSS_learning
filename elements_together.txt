@@ -31,6 +31,7 @@ FONT:(EVERYTHING INHERITED)
 
 
 TEXT:
+
     text-decoration: sets the appearance of decorative lines on text (NOT INHERITED)
         L> line(underline, line-through,...), color, style(solid,wavy,dashed...), thickness
         L> none to remove, usefull for links
@@ -55,6 +56,14 @@ TEXT:
     
     word-spacing: same as last, but for words (INHERITED)
 
+    white-space: how white space inside an element is handled.(INHERITED)
+        L> normal(multiple spaces collapsed, same as newlines, text make to fill the box), 
+            nowrap(same but no newlines), pre(newline and spaces preserved, text wont wrap, it can overflow, good for poems),
+            pre-wrap(same as pre, but will break lines to fill boxes, unless its spaces),
+            pre-line(same as pre-wraped but collapses sequences of white spaces),
+            break-spaces(SIMILAR TO PRE-WRAP,preserves whitespaces, wraps, can break spaces if needed to fill box)
+
+
 
 
 AROUND LINE:
@@ -65,13 +74,43 @@ outline: width, style, color EX: 3px solid green; -> DONT TAKE UP SPACE INSIDE, 
      I can use negative values to get inside the box
 
 
+
+
 AROUND SPACE:
+
 
 padding: top, right, bottom, left == top bottom, left right == top, right left, bottom; if its a percentage -> relative to inline size 
 L> creates extra space within an element.(NOT INHERITED)
 margin: same as padding -> Margins create extra space around an element != padding (NOT INHERITED)
 
 NOTE -> DOING MARGIN: x px AUTO, the auto centers the box
+
+
+
+
+LISTS -> I can add to the html start(to start the count at a certain number), reversed(to count down),
+
+
+
+
+    ORDERED LIST:
+        list-style-type:  sets the marker (INHERITED)
+            L> disc, circle, square...., "-",  custom-counter-style(Identifier matching an @counter-style rule )
+                none
+
+        list-style: allows you to set all the list style properties at once.(INHERITED)
+            L> image, position, type
+
+        list-style-position: sets the position of the ::marker relative to a list item.
+            L> inside(indented and the marker is inside, if I add padding the markers will move with it),
+             outside (same level and the marker is ouside)
+            L> List 1                   List 2
+                -List Item 1-1      vs -List Item 2-1
+
+            L> if I move the text and i want the bullet points to move i should change it to inside
+
+
+
 
 
 
@@ -104,6 +143,36 @@ CURSOR
         L> links - context-menu, help, pointer, progress, wait
         L> selection - cell, crosshair, text, vertical-text
         L> ...
+
+
+CONTENT
+    insert text, symbol, image without altering html- usually for pseudo-elements
+
+    p::before {content: "★ ";} -> inserts before every paragraph the start
+    p::after -> this is after
+    p{...} -> replaces p for what I put in content
+
+    content: none ->hides the pseudo-element, 
+    content: normal-> allows the pseudo-element to be generated but doesnt display anything(reset)
+
+    content: linear-gradient- to add it to the pseudo-element
+    background: image-set( url("image1x.png") 1x, url("image2x.png") 2x); /* Different images for different pixel densities, different resolutions */
+    ....
+
+
+transition
+
+    L> property(which property should be animated, can be any property, even transform),
+     duration(how long it lasts),
+    timing-function(speed of the curve),
+     delay(delay before it starts), 
+     behaviour
+
+
+JS 
+
+    if I have .menu.is-active, I can build a js function that activates the .menu and gets those styles
+
 
 
 
@@ -181,6 +250,25 @@ Reduce Bugs: Minimizes styling issues caused by inconsistent default browser sty
 
 CSS Reset: A method to remove default browser styles for consistency and ease of styling.
 
+
+-------------------------------------------
+PSEUDO CLASSES - keyword added to a selector that specifies a special state of the selected element(s). 
+
+
+
+    :nth-child(2) -> for lists, selects a buller point
+
+    a:hover,
+    a:focus-> together for people that cant selection
+
+    a:active -> when I click
+
+    a:visited 
+
+
+    ---> ::MARKER-  selects the marker box of a list item, which typically contains a bullet or number. 
+                L> fonts, white-space, color, text-combine-upright, unicode-bidi, direction, content,
+                    animation, transition
 
 
 

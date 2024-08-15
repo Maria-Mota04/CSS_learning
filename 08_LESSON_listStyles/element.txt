@@ -1,0 +1,23 @@
+LISTS -> I can add to the html start(to start the count at a certain number), reversed(to count down),
+
+
+
+
+    ORDERED LIST:
+        list-style-type:  sets the marker (INHERITED)
+            L> disc, circle, square...., "-",  custom-counter-style(Identifier matching an @counter-style rule )
+                none
+
+        list-style: allows you to set all the list style properties at once.(INHERITED)
+            L> image, position, type
+
+        list-style-position: sets the position of the ::marker relative to a list item.
+            L> inside(indented and the marker is inside, if I add padding the markers will move with it),
+             outside (same level and the marker is ouside)
+            L> List 1                   List 2
+                -List Item 1-1      vs -List Item 2-1
+
+            L> if I move the text and i want the bullet points to move i should change it to inside
+
+
+

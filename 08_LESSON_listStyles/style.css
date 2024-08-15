@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/*If i set the type to none and padding to 0, it will be normal*/
+ol {
+  /*01, 02, 03..*/
+  /*list-style-type: decimal-leading-zero;*/
+  list-style-type: none;
+  padding: 0;
+}
+
+ul {
+  list-style-type: square;
+  /*centered the text but the bullet points still to the left*/
+  text-align: center;
+  /*this puts it close, default is outside*/
+  list-style-position: inside;
+  /*changes the bulletpoints*/
+  color: blue;
+  line-height: 1.6;
+
+  list-style-image: url("images/checkmark.png");
+  /*list-style I can use image, position, type, etc, WITHOUT COMMAS, in case image doesnt load there will be squares*/
+  list-style: square url("images/checkmark.png") inside;
+}
+
+/*changes all the li elements*/
+li {
+  color: red;
+}
+/*changes only the ul li elements*/
+ul li {
+  color: green;
+}
+
+/*changing only one element, pseudo class
+accepts the arguments odd and even
+*/
+ul li:nth-child(2) {
+  color: yellow;
+}
+
+/*content transforms the bullet points to that text*/
+ul ::marker {
+  color: red;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "Only $5 >>";
+}
