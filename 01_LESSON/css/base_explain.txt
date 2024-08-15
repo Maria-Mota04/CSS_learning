@@ -1,0 +1,9 @@
+p{
+    color:red
+}
+
+p is the selector
+color is the property
+red is the property value
+color: red is the declaration
+the whole structure is the rule

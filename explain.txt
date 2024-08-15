@@ -1,0 +1,5 @@
+project:
+
+1- structure - html
+2- style - css
+3- js - functionality

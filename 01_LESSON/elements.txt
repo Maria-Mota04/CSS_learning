@@ -1,0 +1,5 @@
+color: color of text
+
+I can go to the page: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbE9lN01Eby1LdTBMZnYzRXRSdkg2N3Y1eEFZZ3xBQ3Jtc0ttaE5zY2o2VmU0RlFaUmUwU19PQWVwd1M3Ymp1dmM3MnNLSExPN2R1MzNpRnVzZEs4MVN4bmdiZ1JNT2liTUFySE1iUUpTY181Q0JlMHhiYl9mclR1a2M4dzJmM090M043OVBWcW1XdGE3RkducFBMcw&q=https%3A%2F%2Fjigsaw.w3.org%2Fcss-validator%2F&v=0W6qz0-aDaM
+go to file upload
+to validate my css- to show the errors
