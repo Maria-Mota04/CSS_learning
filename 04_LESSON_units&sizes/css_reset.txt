@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+Consistency: Browsers apply their own default styles, which can vary. A reset helps standardize element appearance across different browsers.
+
+Simplify Styling: By removing default browser styles, you can more easily control the look and feel of your web page.
+
+Reduce Bugs: Minimizes styling issues caused by inconsistent default browser styles.
+
+CSS Reset: A method to remove default browser styles for consistency and ease of styling.

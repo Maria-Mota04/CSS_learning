@@ -1,0 +1,55 @@
+/* html {
+  shouldnt do this!
+  font-size: 16px;
+} THIS IS THE ROOT SIZE*/
+
+/*reseting the css, for vh, etc*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw; /*bad because if the vertical size is too big, it makes a bottom scroll bar appear, 
+  because it isnt expecting a vertical scroll bar
+  100% is better*/
+
+  min-height: 100vh; /*this is good, because it will make the body at least 100% of the vertical size, and still allows it to grow*/
+}
+
+p {
+  /*16 is the default*/
+  font-size: 16px;
+}
+header {
+  width: 50%;
+}
+/*the parent is the header*/
+h1 {
+  border: 2px dashed red;
+  /*50% of the size of the parent, so 25%*/
+  width: 50%;
+  font-size: 3rem;
+  padding: 0.5em; /*recomended, because it will look for the nearest font-size, that is the same elements*/
+}
+main {
+  /*this wont change the p's font-size because it isnt the root*/
+  font-size: 2rem;
+  background-color: skyblue;
+  width: 50vw;
+}
+
+p {
+  font-size: 1rem; /*same as the root, 2rem is double the root*/
+}
+
+p {
+  font-size: 2em; /*em looks at the main element, which is the parent, becuase it looks for the 
+  nearest font-size, not recomended*/
+}
+
+p {
+  font-size: 2rem;
+  width: 40ch; /*ch is the width of the 0 character, so it will be 40 times the width of the 0 character*/
+}

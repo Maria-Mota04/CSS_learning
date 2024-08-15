@@ -1,0 +1,22 @@
+units determine the size of everything in your page
+
+ex: font-size: units
+
+ABSOLUTE: pixels = px -> not recomended because its static for fonts, but for borders for example is good
+
+RELATIVE:
+    - percentage: usually related to the parents size
+
+    - REM: usually for fontsize, related to the root element
+
+    - EM: looks for the main element, the parent for fontsize, but for padding, margin it looks for the fontsize
+        SO IT LOOKS FOR THE NEAREST FONT-SIZE AND USES THAT AS REFERENCE
+        -> not recomended for font, but yes for the padding, margin, button etc because it uses the element iself as reference
+
+    -CH- character - helps determine character width - based on the character '0's width
+
+    -VW,WH- viewport width and height - % is usually better than vw
+        - vh is good to make the body element bigger without adding elements, using min-height = 100vh
+
+
+

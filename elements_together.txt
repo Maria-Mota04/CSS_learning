@@ -35,3 +35,70 @@ outline: initial; -> resets to the initial/default value, usually none
 outline: revert; -> reverts the value of a property to what it would have been if the current stylesheet (or the current layer) didn't apply.
 outline: revert-layer; -> r essentially ignores the current cascade layer (e.g., the author stylesheet) and reverts the property to its value from the previous cascade layer.
 outline: unset; ->  Acts as inherit if the property is inheritable, otherwise acts as initial.
+
+
+
+
+--------------------------------------------
+
+UNITS FOR MEASUREMENTS:
+
+ABSOLUTE: pixels = px -> not recomended because its static for fonts, but for borders for example is good
+
+RELATIVE:
+    - percentage: usually related to the parents size
+
+    - REM: usually for fontsize, related to the root element
+
+    - EM: looks for the main element, the parent for fontsize, but for padding, margin it looks for the fontsize
+        SO IT LOOKS FOR THE NEAREST FONT-SIZE AND USES THAT AS REFERENCE
+        -> not recomended for font, but yes for the padding, margin, button etc because it uses the element iself as reference
+
+    -CH- character - helps determine character width - based on the character '0's width
+
+    -VW,WH- viewport width and height - % is usually better than vw
+        - vh is good to make the body element bigger without adding elements, using min-height = 100vh
+
+
+
+
+-----------------------------------------
+USER STYLE SHEETS
+
+Summary
+
+    Browser Default Styles: Basic styles applied by the browser.
+
+    User Stylesheets: Custom styles applied by the user to override site styles.
+
+    Author Stylesheets: Styles provided by the website developer (external, internal, and inline).
+
+    User-Agent Stylesheets: Special fallback styles applied by the browser.
+
+The cascade in CSS determines how these styles interact, with inline styles typically having the most power, followed by author styles, user styles, and finally browser default styles.
+
+
+-------------------------------
+CSS RESET
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+Consistency: Browsers apply their own default styles, which can vary. A reset helps standardize element appearance across different browsers.
+
+Simplify Styling: By removing default browser styles, you can more easily control the look and feel of your web page.
+
+Reduce Bugs: Minimizes styling issues caused by inconsistent default browser styles.
+
+CSS Reset: A method to remove default browser styles for consistency and ease of styling.
+
+
+
+
+

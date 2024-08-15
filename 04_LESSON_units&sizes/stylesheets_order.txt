@@ -1,0 +1,17 @@
+Summary
+
+    Browser Default Styles: Basic styles applied by the browser.
+
+    User Stylesheets: Custom styles applied by the user to override site styles.
+
+    Author Stylesheets: Styles provided by the website developer (external, internal, and inline).
+
+    User-Agent Stylesheets: Special fallback styles applied by the browser.
+
+The cascade in CSS determines how these styles interact, with inline styles typically having the most power, followed by author styles, user styles, and finally browser default styles.
+
+
+
+
+
+
