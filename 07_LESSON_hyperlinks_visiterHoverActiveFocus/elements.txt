@@ -1,0 +1,20 @@
+CURSOR
+    changes the way the mouse appears when we hover
+    L> auto; pointer; zoom-out;    url(hand.cur), pointer;     url(cursor_1.png) 4 12,auto;
+        url(cursor_2.png) 2 2,pointer; ...
+
+    L>cursor property is specified as zero or more <url> values, separated by commas, 
+    followed by a single mandatory keyword value. Each <url> should point to an image file. 
+
+    Parameters:
+    L> URL - more than one url ->provided as fallbacks, in case some cursor image types are not supported.
+
+    L>coordinates -  relate to the top-left corner of the image - cursor's hotspot
+
+    L> Keys(mandatory)
+        L> general - auto(automatic), default(normal cursor), none
+        L> links - context-menu, help, pointer, progress, wait
+        L> selection - cell, crosshair, text, vertical-text
+        L> ...
+
+

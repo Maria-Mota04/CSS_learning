@@ -1,0 +1,6 @@
+keyword added to a selector that specifies a special state of the selected element(s). 
+
+Pseudo-classes have more specificity than the classes, so doesnt matter the order it will always
+override.
+
+Import to have order between pseudo classes, because some might not appear like in the example

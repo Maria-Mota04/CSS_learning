@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  opacity: 0.8;
+}
+
+/*links usually are <a>*/
+/*when a link hasnt been opened, its blue
+and opened is purple.
+
+And when we hover it it has a pointer
+
+when the link is active is red*/
+
+a {
+  /*remove the underline*/
+  text-decoration: none;
+  /*url , x,y , pointer*/
+  cursor: url("https://www.flaticon.com/svg/static/icons/svg/25/25694.svg"), 10,
+    10 pointer;
+  color: hsl(207, 44%, 49%);
+}
+
+/*pseudo classes, so I can change*/
+a:visited {
+  color: purple;
+}
+
+/*If visited was after hover a visited, it would override and wouldnt show the hover effect*/
+
+/*I add the focus, if a visitor is using a screen reader, it will be able to see the link*/
+a:hover,
+a:focus {
+  /*to change the color, change the first one*/
+  color: hsl(189, 44%, 49%, 0.8);
+  background-color: gold;
+}
+
+/*when I click*/
+a:active {
+  color: red;
+}
