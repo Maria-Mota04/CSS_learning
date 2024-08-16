@@ -1,0 +1,29 @@
+
+COLUMNS - no flexbox or grid (NOT INHERITED )
+
+
+    columns: ets the number of columns to use when drawing an element's contents,
+    as well as those columns' widths.
+    L> column-count, column-width
+
+    column-count: ideal number of columns into which the element's, may not be this
+    content should be flowed, defined as an <integer> or the keyword auto.
+     (if nothing is set -> it puts max of the allowed collumns)
+
+    columns-width: ideal column width,  the actual may be different
+
+    column-gap: size bwteen cols -> normal or size
+
+    column-rule-width: width of the line between columns  
+        L> thing, medium, thick, or actual size
+
+    columns-rule - >width, style, and color of the line drawn between columns in a multi-column layout.
+
+    column-span: makes an element go across all collumns, when set to all
+
+    column-fill: how content is divided
+        L> auto or balance(equally divided)
+
+    NOTE:   -to not have containers break in half we should use break-inside: avoid
+            -and if I want to make a collumn in a container mandator: break-before: column -> if one 
+             column it has a problem

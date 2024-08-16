@@ -82,7 +82,7 @@ AROUND SPACE:
     padding: top, right, bottom, left == top bottom, left right == top, right left, bottom; if its a percentage -> relative to inline size 
     L> creates extra space within an element.(NOT INHERITED)
     margin: same as padding -> Margins create extra space around an element != padding (NOT INHERITED)
-    margin-inline - > only applies to left and right
+    margin-inline - > only applies to left and right (there exists margin collapsin when 2 margins overlap)
 
     NOTE -> DOING MARGIN: x px AUTO, the auto centers the box
 
@@ -146,7 +146,7 @@ CURSOR
         L> ...
 
 
-CONTENT
+CONTENT(NOT INHERITED)
     insert text, symbol, image without altering html- usually for pseudo-elements
 
     p::before {content: "★ ";} -> inserts before every paragraph the start
