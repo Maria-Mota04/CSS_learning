@@ -1,0 +1,63 @@
+POSTION: sets how an element is positioned in a document. (NOT INHERITED)
+            The top, right, bottom, and left properties 
+            determine the final location of positioned elements.
+
+    STATIC(default) -> positioned according to the normal flow
+                    L> top, right... and z-index have no effect
+
+    RELATIVE -> according to normmal flow
+            L> can offset it relative to top, right... not affecting other elements,
+             they assume he is taking his original space
+                    SO I CAN MOVE IT WITHOUT MOVING OTHER ELEMENTS, BUT ORIGINAL SPACE SAVED
+            L> space for the element same as static
+            L> z-index usable
+
+    ABSOLUTE -> removed from the normal flow
+            L> no space created for the element, SO OTHER ELEMENTS ACTS AS IF IT DID NOT EXIST
+            L> position relative to the closest ancestor or initial containing block
+            L> top, right... usable
+            L> z-index usable
+            L> margins cant be collapsed
+
+    FIXED -> removed from the normal flow -> ex: if it was block it doesnt take 100% width anymore
+            L> no space created
+            L> SAME AS ABSOLUTE, BUT THE RELATIVE POSITION CHANGES
+            L> position relative to initial containing block(maybe viewport)
+            L> top, right,... usable
+            L>s-index usable
+            L> USED FOR FLOATING AN ELEMENT THAT STAYS IN THE SAME POSITION WHEN SCROLLING
+
+    STICKY -> normal document flow
+            L>SIMILAR TO FIXED, but stays in the normal flow until it reaches the position I defined
+            L> position relative nearest SCROLLING ANCESTOR and containing block
+            L> top,... usable, offset doesnt affect other elements
+            L> z-index usable
+            L> STICKS TO THE NEAREST ANCESTOR
+            L> can be used for sticky lists, like alphabet with words
+
+            L> stops being sticky when I reach the containers boundary or it becomes invisible.
+                    L> remains stuck until another container passes it
+
+
+
+
+    NOTE: removed from the normal document flow => doesnt affect others
+        ANCESTOR - element that encloses my element -> SHOULD ALWAYS BE POSITIONED RELATIVE FOR 
+                                                        ABSOLUTE, STICKY ..
+                                                    -> IF ANCESTOR IS STATIC,
+                                                     THEN THE ABSOLUTE CHILD WILL BE 
+                                                     RELATIVE TO THE INITIAL CONTAINING BLOCK
+                L> if ancestor is:
+                    - relative: serves as reference point for absolute children
+
+
+
+        INITIAL CONTAINING BLOCK: iewport or the root element
+
+        SCROLLING ANCESTOR(STICKY): has overflow defined
+
+        THE ORDER: the order without z-index(default = 0) is determined by the order 
+        in reverse from the html stucture
+
+        INVISIBLE CONTAINERS: I can do top: -10000px; it will still be a part of the document,
+        but will be hidden

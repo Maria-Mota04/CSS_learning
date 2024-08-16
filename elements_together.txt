@@ -59,6 +59,7 @@ TEXT:
     white-space: how white space inside an element is handled.(INHERITED)
         L> normal(multiple spaces collapsed, same as newlines, text make to fill the box), 
             nowrap(same but no newlines), pre(newline and spaces preserved, text wont wrap, it can overflow, good for poems),
+                L>when I dont want text to separate
             pre-wrap(same as pre, but will break lines to fill boxes, unless its spaces),
             pre-line(same as pre-wraped but collapses sequences of white spaces),
             break-spaces(SIMILAR TO PRE-WRAP,preserves whitespaces, wraps, can break spaces if needed to fill box)
@@ -111,6 +112,35 @@ LISTS -> I can add to the html start(to start the count at a certain number), re
             L> if I move the text and i want the bullet points to move i should change it to inside
 
 
+
+COLUMNS - no flexbox or grid (NOT INHERITED )
+
+
+    columns: ets the number of columns to use when drawing an element's contents,
+    as well as those columns' widths.
+    L> column-count, column-width
+
+    column-count: ideal number of columns into which the element's, may not be this
+    content should be flowed, defined as an <integer> or the keyword auto.
+     (if nothing is set -> it puts max of the allowed collumns)
+
+    columns-width: ideal column width,  the actual may be different
+
+    column-gap: size bwteen cols -> normal or size
+
+    column-rule-width: width of the line between columns  
+        L> thing, medium, thick, or actual size
+
+    columns-rule - >width, style, and color of the line drawn between columns in a multi-column layout.
+
+    column-span: makes an element go across all collumns, when set to all
+
+    column-fill: how content is divided
+        L> auto or balance(equally divided)
+
+    NOTE:   -to not have containers break in half we should use break-inside: avoid
+            -and if I want to make a collumn in a container mandator: break-before: column -> if one 
+             column it has a problem
 
 
 
@@ -228,6 +258,8 @@ DISPLAY:(NOT INHERITED)
 
 
 
+
+
 FLOAT:(NOT INHERITED)
 
     L> The element is removed from the normal flow of the page SO IF I APPLY MARGIN TO OTHER CONTENT IT wont
@@ -246,6 +278,69 @@ FLOAT:(NOT INHERITED)
         Otherwise do: clear:both as a separate class and add it to what I want
 
 
+POSTION: sets how an element is positioned in a document. (NOT INHERITED)
+            The top, right, bottom, and left properties 
+            determine the final location of positioned elements.
+
+    STATIC(default) -> positioned according to the normal flow
+                    L> top, right... and z-index have no effect
+
+    RELATIVE -> according to normmal flow
+            L> can offset it relative to top, right... not affecting other elements,
+             they assume he is taking his original space
+                    SO I CAN MOVE IT WITHOUT MOVING OTHER ELEMENTS, BUT ORIGINAL SPACE SAVED
+            L> space for the element same as static
+            L> z-index usable
+
+    ABSOLUTE -> removed from the normal flow
+            L> no space created for the element, SO OTHER ELEMENTS ACTS AS IF IT DID NOT EXIST
+            L> position relative to the closest ancestor or initial containing block
+            L> top, right... usable
+            L> z-index usable
+            L> margins cant be collapsed
+
+    FIXED -> removed from the normal flow -> ex: if it was block it doesnt take 100% width anymore
+            L> no space created
+            L> SAME AS ABSOLUTE, BUT THE RELATIVE POSITION CHANGES
+            L> position relative to initial containing block(maybe viewport)
+            L> top, right,... usable
+            L>s-index usable
+            L> USED FOR FLOATING AN ELEMENT THAT STAYS IN THE SAME POSITION WHEN SCROLLING
+
+    STICKY -> normal document flow
+            L>SIMILAR TO FIXED, but stays in the normal flow until it reaches the position I defined
+            L> position relative nearest SCROLLING ANCESTOR and containing block
+            L> top,... usable, offset doesnt affect other elements
+            L> z-index usable
+            L> STICKS TO THE NEAREST ANCESTOR
+            L> can be used for sticky lists, like alphabet with words
+
+            L> stops being sticky when I reach the containers boundary or it becomes invisible.
+                    L> remains stuck until another container passes it
+
+
+
+
+    NOTE: removed from the normal document flow => doesnt affect others
+        ANCESTOR - element that encloses my element -> SHOULD ALWAYS BE POSITIONED RELATIVE FOR 
+                                                        ABSOLUTE, STICKY ..
+                                                    -> IF ANCESTOR IS STATIC,
+                                                     THEN THE ABSOLUTE CHILD WILL BE 
+                                                     RELATIVE TO THE INITIAL CONTAINING BLOCK
+                L> if ancestor is:
+                    - relative: serves as reference point for absolute children
+
+
+
+        INITIAL CONTAINING BLOCK: iewport or the root element
+
+        SCROLLING ANCESTOR(STICKY): has overflow defined
+
+        THE ORDER: the order without z-index(default = 0) is determined by the order 
+        in reverse from the html stucture
+
+        INVISIBLE CONTAINERS: I can do top: -10000px; it will still be a part of the document,
+        but will be hidden
 
 
 
@@ -332,10 +427,7 @@ CSS RESET- always reset
     *{
         margin: 0;
         padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
+        box-sizing: border-box;
     }
 
     Consistency: Browsers apply their own default styles, which can vary. A reset helps standardize element appearance across different browsers.
@@ -346,6 +438,10 @@ CSS RESET- always reset
 
     CSS Reset: A method to remove default browser styles for consistency and ease of styling.
 
+------------------------------------------
+CLASSES:
+    if I have a container with class="name1 name2", it is 2 classes,
+         if I have a whitespace it means 2 classes
 
 -------------------------------------------
 PSEUDO CLASSES - keyword added to a selector that specifies a special state of the selected element(s). 
@@ -377,3 +473,7 @@ SHORTCUTS:
     I can type anything like p, link etc if i tab they will appear
 
     .block.right -> creates a div with 2 classes ("block right")
+
+
+--------------------------------------
+FORM ELEMENTS DO NOT INHERIT!!!! -> button, input etc
