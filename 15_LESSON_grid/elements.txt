@@ -1,0 +1,81 @@
+
+GRID: two-dimensional != FLEXBOX CAUSE IT WORKS WITH ROWS AND COLS AT THE SAME TIME
+
+    - set of intersecting horizontal and vertical lines defining columns and rows.
+     Elements can be placed onto the grid within these column and row lines.
+
+    Grid Container: Apply display: grid or display: inline-grid to an element to turn it into a grid container.
+                     All its direct children become grid items.
+
+    Track Sizes: You can set fixed track sizes (like pixels) or flexible sizes (like percentages or fr units) for the rows and columns.
+
+    Item Placement: Place grid items using line numbers, names, or by defining areas. The grid layout can automatically position items as well.
+
+    Flexible Layouts: Additional rows or columns can be automatically created as needed, allowing for responsive designs.
+
+    Alignment and Overlapping: Control how items are aligned within the grid, and manage overlapping content using properties like z-index.
+
+    ELEMENT:
+            - grid-auto-flow: auto-placement
+                    L> row(default, putting items in the necessary rows),
+                    column, row dense(doesnt let there be gaps, so may change the order), column dense
+
+            - grid-template-: for more control than the last
+                    L> -columns: defines the line names and track sizing functions
+                            ex: 200px 100px 200px (width of each cols, there are 3,
+                                                    if i need more they will be wrapped)
+                            ex: 2fr 1fr 1fr(the first col is 2 times the last two)
+                            ex: 200px 1fr 1fr (first will be 100px, and the rest will divide)
+
+                            ex: repeat(4,1) (4 cols with fraction 1)
+                            ex: repeat(2, 1fr 2 fr) (this will repeat twice, but I defined 2 cols)
+                            L> I CAN PROVIDE A LINE NAME BEHIND EACH number
+
+                            ex: minmax(100px, 1fr) - defined one col at least 100px, but can grow to take up any remaining space
+                            ex: fit-content(40%) - this col will grow to git its content but will never go over 40% of grid width
+                            ex: sub-grid - grid item inherits structure of parent, it will align the items with the grid lines of the parent
+                            ex: masonry - automatically aranjes items to fill the gaps
+
+                    L>-rows: same but for rows
+                    L>-areas:
+
+            - row/col-gap 
+            - gap = row-gap col-gap
+            - justify-content-row axis, align-items(aligns items within their grid area, column axis),
+                    align-content(aligns entire grid column axis)
+            - justify-items - aligns grid items within their row axis
+            - place-items
+                L> align-items, justify-items
+            - place-content - same but for content
+
+    CHILDREN:
+        - grid-column-start and grid-column-end: will define how manu columns the child will take
+            L> can also take start and span number
+
+        -grid-row -same
+
+        -grid-area - row-start, col-start, row-end, col-end
+
+        - justify-self, row axis
+        - align-self - col axis
+        -place-self- align, justify
+
+
+        
+
+
+    AUTO VS TEMPLATE:
+
+        grid-template-rows:
+
+            Explicit Definition: Defines sizes of rows that you explicitly set.
+            Used For: Static and known number of rows and their sizes.
+
+
+        grid-auto-rows:
+
+            Implicit Definition: Defines sizes of rows that are created automatically when needed.
+            Used For: Dynamic content where the number of rows can vary.
+
+    NOTE: I CAN USE FRACTION UNITS SO I USE ALL THE AVAILABLE SPACE, BUT EACH COLS/ROW TAKES UP X FRACTION
+    I can inspect the website and go to layout to see the website grid

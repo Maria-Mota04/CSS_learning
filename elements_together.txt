@@ -266,13 +266,13 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
 
                     its a block level container(we can have inline flex that is the same but for inlines)
 
-                    - align-content (aligns the rows)-  distribution of space between and around content items using the cross axis
+                    - align-content (how multiple lines are spaced)-  distribution of space between and around content items using the cross axis
                         L> start, end - depends on the flex-direction, reference is cross axis
                         L> self-start, self-end - same as last but reference is also the parent container
                         L> flex-start, flex-end - same as start, end, but if direction is row-reverse,
                                                 flex-start is right and flex-end is left (opposite for start, end)
 
-                        L> baseline - aligns at the invisible line where caracters sit, across different rows
+                        L> baseline - aligns at the invisible line where caracters sit, across different rows, for multiple lines is the end
                                     aligns the rows (different from align-items)
                             L> first/last baseline -same but the baseline is at the start or end of the cross axis
 
@@ -286,7 +286,7 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
                         L> unsafe____(fill) - allows aligment to clip or overflow
 
 
-                    - align- items(single row, ONLY DEALS EACH THING AS A SINGLE ROW) - sets align-self to the children
+                    - align- items(single row, ONLY DEALS EACH THING AS A SINGLE ROW, the space between lines remains) - sets align-self to the children
                         L> same as last, without space around and space between and such cause its just one row
 
                     - flex-direction - row, row-reverse, column, column-reverse (column changes the cross axis to horizontal- for aligments)
