@@ -164,7 +164,7 @@ CONTENT
 
 
 
-DISPLAY:
+DISPLAY:(NOT INHERITED)
 
     FOR THE ELEMENT:
 
@@ -193,6 +193,31 @@ DISPLAY:
 
         NONE -> items disappear, removes from the document flow (bad)
 
+
+        EXTRAS:
+            FLOW-ROOT: creates a new block-formatting context, 
+            isolates the elements from floats or margin collapsing. (preventing floated children escaping parents container)
+
+            CONTENTS:
+
+            BLOCK FLOW-ROOT: block level element + new formatting context
+            (preventing floated children escaping parents container)
+
+            INLINE FLOW-ROOT: same but inline
+
+            INLINE-FLEX: will behave like inline, but children will be FLEX
+
+            INLINE-GRID: same but with GRID
+
+            TABLE: element as block level container -  to simulate a table
+
+            TABLE-ROW: element like a row in a table
+
+            LIST-ITEM: to behave like a list item, for fake lists
+
+
+
+
     FOR THE CHILDREN:
         
         FLOW_LAYOUT ->
@@ -200,6 +225,25 @@ DISPLAY:
         GRID ->
 
         FLEX ->
+
+
+
+FLOAT:(NOT INHERITED)
+
+    L> The element is removed from the normal flow of the page SO IF I APPLY MARGIN TO OTHER CONTENT IT wont
+            AFFECT THE FLOATED ITEM(i should add margin to the actual block)
+    L> still remaining a part of the flow
+
+    L> places an element on the left or right side of its container,
+    L> allowing text and inline elements to wrap around it. (TEXT WRAPPING)
+
+    L> floating elements behave like blocks in layout.
+
+    L> IF I DONT WANT OTHER CONTENT WRAPPING AROUND,
+        if I have a container around it:
+            I can display: flow-root(in the container I have behind it), so the container wont shrink
+        
+        Otherwise do: clear:both as a separate class and add it to what I want
 
 
 
@@ -325,3 +369,11 @@ PSEUDO CLASSES - keyword added to a selector that specifies a special state of t
 
 
 
+-----------------------------------
+SHORTCUTS:
+    -p*5>lorem20 - 5 paragraphs the lorem text with 20 words
+    .name -> div with class name
+    #name -> div with Identifier
+    I can type anything like p, link etc if i tab they will appear
+
+    .block.right -> creates a div with 2 classes ("block right")

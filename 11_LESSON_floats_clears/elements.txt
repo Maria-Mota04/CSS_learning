@@ -1,0 +1,19 @@
+FLOAT:(NOT INHERITED)
+
+    L> The element is removed from the normal flow of the page SO IF I APPLY MARGIN TO OTHER CONTENT IT wont
+            AFFECT THE FLOATED ITEM(i should add margin to the actual block)
+    L> still remaining a part of the flow
+
+    L> places an element on the left or right side of its container,
+    L> allowing text and inline elements to wrap around it. (TEXT WRAPPING)
+
+    L> floating elements behave like blocks in layout.
+
+    L> IF I DONT WANT OTHER CONTENT WRAPPING AROUND,
+        if I have a container around it:
+            I can display: flow-root(in the container I have behind it), so the container wont shrink
+        
+        Otherwise do: clear:both as a separate class and add it to what I want
+        
+
+
