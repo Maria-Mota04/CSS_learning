@@ -68,10 +68,10 @@ TEXT:
 
 AROUND LINE:
 
-border: width, style, color EX:  thick double #32a1ce; there are also sides like the bellow ones (NOT INHERITED)
-outline: width, style, color EX: 3px solid green; -> DONT TAKE UP SPACE INSIDE, GOES OUTSIDE,!= BORDER(NOT INHERITED)
-    L> I can also have an outline - offset, that gives me a distance of the line from our box,
-     I can use negative values to get inside the box
+    border: width, style, color EX:  thick double #32a1ce; there are also sides like the bellow ones (NOT INHERITED)
+    outline: width, style, color EX: 3px solid green; -> DONT TAKE UP SPACE INSIDE, GOES OUTSIDE,!= BORDER(NOT INHERITED)
+        L> I can also have an outline - offset, that gives me a distance of the line from our box,
+        I can use negative values to get inside the box
 
 
 
@@ -79,11 +79,12 @@ outline: width, style, color EX: 3px solid green; -> DONT TAKE UP SPACE INSIDE, 
 AROUND SPACE:
 
 
-padding: top, right, bottom, left == top bottom, left right == top, right left, bottom; if its a percentage -> relative to inline size 
-L> creates extra space within an element.(NOT INHERITED)
-margin: same as padding -> Margins create extra space around an element != padding (NOT INHERITED)
+    padding: top, right, bottom, left == top bottom, left right == top, right left, bottom; if its a percentage -> relative to inline size 
+    L> creates extra space within an element.(NOT INHERITED)
+    margin: same as padding -> Margins create extra space around an element != padding (NOT INHERITED)
+    margin-inline - > only applies to left and right
 
-NOTE -> DOING MARGIN: x px AUTO, the auto centers the box
+    NOTE -> DOING MARGIN: x px AUTO, the auto centers the box
 
 
 
@@ -116,13 +117,13 @@ LISTS -> I can add to the html start(to start the count at a certain number), re
 
 MULTI:
 
-background: color, image, origin, size, repeat-method, attachment, clip, position
+    background: color, image, origin, size, repeat-method, attachment, clip, position
 
 SIZE:
-box-sizing: sets how the total width and height of an element is calculated
-            1- content-box -  default, is i say box = 100px, it will add border and padding, so it will be bigger   
-            2- border-box - best one, if i say box = 100px, it will account the border and padding (use in css reset)
-                L> doesnt include margin cause that is outside or outline
+    box-sizing: sets how the total width and height of an element is calculated
+                1- content-box -  default, is i say box = 100px, it will add border and padding, so it will be bigger   
+                2- border-box - best one, if i say box = 100px, it will account the border and padding (use in css reset)
+                    L> doesnt include margin cause that is outside or outline
 
 
 CURSOR
@@ -160,13 +161,64 @@ CONTENT
     ....
 
 
-transition
+
+
+
+DISPLAY:
+
+    FOR THE ELEMENT:
+
+        BLOCK - > 100% width default, and stack ontop of eachother(newline), and default margin
+                    can control the overflow if the element exceeds overflow: visible/hidden/scroll/auto
+                    can contain block and inline elements, respect margin, padding and border
+                    (ex: p, div, h1, ul, ol, section, article, header, footer, form)
+
+        INLINE - > only as much width as necessary, dont start newlines,
+                container only other inline elements or text, DO NOT RESPECT WIDTH, HEIGHT,
+                MARGIN-TOP, MARGIN-BOTTOM, PADDING-TOP, PADDING-BOTTOM
+                ----> THEY TAKE THE SPACE THEY NEED, bu respect horizontal margin and padding.
+                vertical align can be controlled with vertical-align.
+                respect whitespaces
+                (ex: span, a, em, strong, img, input, label, code, abbr, cite, q)
+                
+
+        INLINE-BLOCK -> similar to inline, no newline, width as needed, vertical align can be controlled 
+                        with vertical-align, respect whitespaces
+                    -> similar to block, respects width and height, respect padding and margins, 
+                    can contain block and inline
+                    (ex: img, input, button, label )
+                    (ex: can be made inline-block: span, a, div, li)
+
+                    USEFUL - turning link into a button and turning a list into a row
+
+        NONE -> items disappear, removes from the document flow (bad)
+
+    FOR THE CHILDREN:
+        
+        FLOW_LAYOUT ->
+
+        GRID ->
+
+        FLEX ->
+
+
+
+
+
+
+TRANSITION(NOT INHERITED)
 
     L> property(which property should be animated, can be any property, even transform),
      duration(how long it lasts),
     timing-function(speed of the curve),
      delay(delay before it starts), 
      behaviour
+
+     L> YOU PUT TRANSITION IN THE NORMAL ELEMENT, THE PSEUDO CLASS HAS THE AFTER VALUE
+
+TRANSFORM(NOT INHERITED)
+    L>lets you rotate, scale, skew, or translate an element. Modifies the coordinate space.
+    L> takes one or mor transform func or none
 
 
 JS 
@@ -182,11 +234,11 @@ JS
 
 GLOBAL VALUES: ex
 
-outline: inherit; -> inherits from the parent
-outline: initial; -> resets to the initial/default value, usually none
-outline: revert; -> reverts the value of a property to what it would have been if the current stylesheet (or the current layer) didn't apply.
-outline: revert-layer; -> r essentially ignores the current cascade layer (e.g., the author stylesheet) and reverts the property to its value from the previous cascade layer.
-outline: unset; ->  Acts as inherit if the property is inheritable, otherwise acts as initial.
+    outline: inherit; -> inherits from the parent
+    outline: initial; -> resets to the initial/default value, usually none
+    outline: revert; -> reverts the value of a property to what it would have been if the current stylesheet (or the current layer) didn't apply.
+    outline: revert-layer; -> r essentially ignores the current cascade layer (e.g., the author stylesheet) and reverts the property to its value from the previous cascade layer.
+    outline: unset; ->  Acts as inherit if the property is inheritable, otherwise acts as initial.
 
 
 
@@ -233,22 +285,22 @@ The cascade in CSS determines how these styles interact, with inline styles typi
 -------------------------------
 CSS RESET- always reset
 
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
 
-Consistency: Browsers apply their own default styles, which can vary. A reset helps standardize element appearance across different browsers.
+    Consistency: Browsers apply their own default styles, which can vary. A reset helps standardize element appearance across different browsers.
 
-Simplify Styling: By removing default browser styles, you can more easily control the look and feel of your web page.
+    Simplify Styling: By removing default browser styles, you can more easily control the look and feel of your web page.
 
-Reduce Bugs: Minimizes styling issues caused by inconsistent default browser styles.
+    Reduce Bugs: Minimizes styling issues caused by inconsistent default browser styles.
 
-CSS Reset: A method to remove default browser styles for consistency and ease of styling.
+    CSS Reset: A method to remove default browser styles for consistency and ease of styling.
 
 
 -------------------------------------------
