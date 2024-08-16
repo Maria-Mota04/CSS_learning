@@ -1,0 +1,63 @@
+
+FLEX:(NOT INHERITED)
+    ELEMENT: 
+
+        layout of items in one dimension
+
+        Children can be laid out in any direction
+        can flex their sizes(to fill or to shrink)
+        Horizontal and vertical alignment easily manipulated
+
+        its a block level container(we can have inline flex that is the same but for inlines)
+
+        - align-content (aligns the rows)-  distribution of space between and around content items using the cross axis
+            L> start, end - depends on the flex-direction, reference is cross axis
+            L> self-start, self-end - same as last but reference is also the parent container
+            L> flex-start, flex-end - same as start, end, but if direction is row-reverse,
+                                     flex-start is right and flex-end is left (opposite for start, end)
+
+            L> baseline - aligns at the invisible line where caracters sit, across different rows
+                        aligns the rows (different from align-items)
+                L> first/last baseline -same but the baseline is at the start or end of the cross axis
+
+            L> stretch
+            L> space - 
+                    L> between - spacing between them - vertical- ITEMS FLUSHED TO THE SIDES OF THE CONTAINERS
+                    L> around - spacing is the same around, EXPECT AT THE START AND END != LAST
+                    L> evenly -  items evenly distributed across the container, BETWEEN THE ITEMS
+                                                         AND END AND BEGINNING SAME SPACE
+            L> safe ____ (fill) -  prevents clipping or overflow
+            L> unsafe____(fill) - allows aligment to clip or overflow
+
+
+        - align- items(single row, ONLY DEALS EACH THING AS A SINGLE ROW) - sets align-self to the children
+            L> same as last, without space around and space between and such cause its just one row
+
+        - flex-direction - row, row-reverse, column, column-reverse (column changes the cross axis to horizontal- for aligments)
+                            L> items in a line, but the way they align(cross-axis) is vertical
+
+        - flex-flow - flex-direction and flex-wrap
+            L> flex-wrap - nowrap(CAN OVERFLOW), wrap, wrap-reverse
+
+
+        - justify-content - distribution of space around items , along main axis(same as align but horizontal)
+
+        - gap(spacing) - space between columns
+
+    CHILDREN:
+       -  align-self: overrides align-items (using cross axis)
+        - order: order within container
+        -flex- grow and shrink are specifying how they should behave when the size of the container changes
+        
+            L> flex-grow - how much size, compared to others it should take up in the container,
+                                         after the flex-basis, not counting it ( so value 2 might not be double)
+                                         as I change the image size, it affects it too
+            L> flex-shrink - same but reverse 
+            L> flex-basis - initial main size of a flex item
+            
+
+    NOTES: 
+        - cross-axis: perpendicular to the main axis, vertical(so flex-direction: row is vertical)
+        - SO BY DEFAULT: ALIGN-CONTENT(VERTICAL), JUSTIFY-CONTENT(HORIZONTAL)
+        - FLEX ITEMS OVERFLOW SHOULD WRAP
+        - shrink and grow lets us go beyond the basis

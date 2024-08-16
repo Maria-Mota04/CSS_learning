@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  display: flex;
+  /*gap between (columns)*/
+  gap: 1rem;
+  /*align horizontally*/
+  justify-content: center;
+  /*align vertically*/
+  align-items: center;
+  /* flex-direction: column; now they are stacked on top of each other */
+
+  /*so the items dont overflow*/
+  flex-wrap: wrap;
+
+  /*aligns the rows not the items*/
+  align-content: center;
+}
+
+/*properties for the children*/
+.box {
+  /* min-width: 100px; */
+  min-height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  height: 100px;
+
+  display: flex; /*makes the numbers flex items*/
+  justify-content: center;
+  align-items: center;
+
+  /*flex items properties*/
+  /*this give a kind of minimum width*/
+  flex-basis: 100px;
+  /*if they need to grow they will grow equally*/
+  flex-grow: 1;
+}
+
+.box:nth-child(2) {
+  /*whatever space is left from the flex-basis, this will take double what the others take*/
+  flex-grow: 2;
+  /*I can srink the box*/
+
+  /*grow, shrink, basis*/
+  /*this element will grow 2 times more and shrink 2 times more*/
+  flex: 2 2 100px;
+
+  /*to the beginning*/
+  order: -1;
+}
