@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/*begin Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+/*end Reset*/
+
+/*Utility Classes*/
+
+/*for the hello and wave to not break, same with im jane*/
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  /*to hide figcaption, need for accessibility*/
+  position: absolute;
+  left: -10000px;
+}
+
+/*End Utility Classes*/
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+
+  background-color: aliceblue;
+
+  /*I can have a linear gradient and a background image, they overlap*/
+  /* background-image: url("img/bubbles.png"),
+    linear-gradient(to left, steelblue, white);
+
+  /*I can style each image independently
+  background-repeat: repeat-y, no-repeat;
+  /*same definition for both
+  background-position: right center;
+  /*200px for the bubbles, auto for the gradient
+  background-size: 200px, auto; */
+}
+
+/*to filter the background image*/
+.container {
+  /*if the background image is not showing,fall back color*/
+  background-color: rgb(251, 210, 156);
+  background-image: url("./img/map-2176x1451.png");
+  background-repeat: repeat;
+  background-position: center center;
+
+  background-size: cover;
+  background-color: hsla(0, 0%, 0%, 0.4);
+}
+.hero {
+  border-bottom: 2px solid #333;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.h1 {
+  font-size: 500%;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px #000;
+  /* background-color: hsla(0, 0%, 0%, 0.4);
+  padding: 0.25rem;
+  border-radius: 10px; */
+}
+
+.profile-pic-figure {
+  width: 35%;
+}
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 5px double grey;
+  border-radius: 50%;
+}
+
+.example {
+  margin-top: 1rem;
+  padding-left: 20px;
+  border: 1px solid red;
+}
+
+/*responsive image because we gave it a % width and height to follow it with auto*/
+/*images are inline elements by default, so it will have margin/padding default*/
+.exampled img {
+  /*25% of the container width*/
+  width: 25%;
+  height: auto;
+}
+
+.clip {
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url("img/scenic-2200x1331.png");
+  background-size: 100%;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /*Transparent text, so the background image is visible*/
+  color: #0000003e;
+}

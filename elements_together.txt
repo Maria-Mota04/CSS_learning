@@ -30,7 +30,25 @@ FONT:(EVERYTHING INHERITED)
    
 
 
-TEXT:
+TEXT:   
+    text-overflow: sets how hidden overflow content is signaled to users.(NOT INHERITED)
+        L> clip - can clip in the middle of a letter(to only clip between characters text-overflow: "")
+        L> ellipsis
+        L> string
+
+    text-shadow:  adds shadows to text. (INHERITED)
+        L> x,y, blur radius, color
+
+    writing-mode:  whether lines of text are laid out horizontally or vertically,
+                 as well as the direction in which blocks progress.
+
+            L> horizontal-tb, vertical-rl, vertical,lr
+
+    text-orientation: sets the orientation of the text characters in a line. 
+                only affects text in vertical mode (when writing-mode is not horizontal-tb)
+
+
+    text-underline-offset: offset distance of an underline text decoration line
 
     text-decoration: sets the appearance of decorative lines on text (NOT INHERITED)
         L> line(underline, line-through,...), color, style(solid,wavy,dashed...), thickness
@@ -73,6 +91,9 @@ AROUND LINE:
     outline: width, style, color EX: 3px solid green; -> DONT TAKE UP SPACE INSIDE, GOES OUTSIDE,!= BORDER(NOT INHERITED)
         L> I can also have an outline - offset, that gives me a distance of the line from our box,
         I can use negative values to get inside the box
+
+    border-radius: only works with square images - 50% is a circle
+        L>top-left, top-right, bottom-right, bottom-left
 
 
 
@@ -141,6 +162,112 @@ COLUMNS - no flexbox or grid (NOT INHERITED )
     NOTE:   -to not have containers break in half we should use break-inside: avoid
             -and if I want to make a collumn in a container mandator: break-before: column -> if one 
              column it has a problem
+
+
+
+img(NOT INHERITED)
+    responsive image is an image that had width a % and height auto
+    image should be inside a figure element
+
+    I should add, before background-image a fallback color
+        ----->NOTE GO TO WEBKIT TEXT-FILL
+
+    background-image: one or more background images
+        L> url -  i can overlap them
+        L>linear-gradient - creates an image consisting of a progressive transition between 
+                            two or more colors along a straight line.
+                            L> direction - can be an angle or to bottom, to top...
+                            L>color transitions with percentages ex: blue 50%
+                            L>...
+
+        L>radial-gradient - olor transition radiating outward from a central point,
+            L> args: (SHAPE SIZE at POSITION, colors...)
+            L> shape: circle or ellipse
+            L> size: (size of the ending shape of the gradient) - closest-size,...
+            L>position: (starting point of gradient) - center, top, 50% 50%, ...
+
+    background-clip: SHOULD BE USED WITH WEBKIT AND MOZ FOR SUPPORTING PLATFORMS
+
+        whether an element's background extends underneath its border box, padding box, or content box.    
+        L> border-box- background extends outside the edge of the border, but under, no overflow
+        L> padding-box - extends into the padding, but not into the border, no overflow
+        L> content-box - background inside the content box, will not automatically stretch
+        L> text - background is painted to the text
+
+
+    WEBKIT:   for google/safari - Same for moz(firefox) - shouldnt be used not supported
+        
+        L> THERE ARE WAY MORE STYLES GO TO REFERENCE
+        L> text-fill: color of text- can be transparent TO PAIR WITH LINEAR GRADIENT
+        L> background-clip: same as last
+                L> if its text, I can down the colors transparency and i can see the image under
+
+    
+    CHECK SCROLLBARS STYLING
+        
+
+
+    background-origin: 
+        from the border start, inside the border, or inside the padding.
+        L>border-box: image starts from the outer edge border
+        L> padding-box: image starts from the outer edge padding, excluding the border
+        L> content-box: image starts from the content edge, excluding the padding/border
+
+    background-repeat:  how background images are repeated.
+                         can be repeated along the horizontal and vertical axes, or not repeated at all.
+
+                L> repeat-x (repeats horizontally, can cause clipping)
+                L>repeat-y (same but vertically)
+                L> repeat(default, repeated as many times to fill, may be cropped)
+                L>space(repeated as much without clipping, first and last
+                                 glued to the sides and even whitespace between images)
+
+                L>round(image repeated without clipping, when container stretches,
+                             image will stretch until I have space for one more image)
+                L>no-repeat(not repeated, image where background-origin tells)
+
+    background-size: size of the element's background image. 
+        L>cover - scales the image(keeping ratio) to the smallest size to fill the container, leaves no empty space
+                    L> may crop image, resizes when I change the containers size
+
+        L>contain - sizes up image without stretching or cropping, if container larger, it will cause repeat
+        L> %,em,rem,px (width only height is auto)
+        L> auto
+        L> if i set two values is width and height
+        L> FOR MORE THAN ONE BACKGROUND -> auto, auto != auto auto; or 50%, 25%, 25% etc
+
+    background-position: sets the initial position for each background image.
+                         ( position is relative to the position layer set by background-origin.)
+
+                L>top, left, center, bottom, right
+                L> 25% 75%...
+
+    background-attatchment: sets whether a background image's position is fixed within the viewport, 
+                                or scrolls with its containing block.
+
+                L> scroll - background fixed relative to the element and doesnt scroll with the content, nothing moves
+                L> fixed - background is fixed realtive to the viewport, even if the element has a scroling mechanism
+                L> local - background fixed relative to the elements contents 
+                            L> if element has scrolling mechanism - background scrolls with it
+                                L>  and the background painting area and
+                                         background positioning area are relative to the scrollable area of the element
+
+    background-blend-mode: sets how an element's background images should blend 
+                        with each other and with the element's background color.
+
+
+    NOTE: 
+        background image by default repeats, If i dont want that i need o explicitly say it
+
+        If i want to filter an image, add a container and add a background-color with transparency
+
+        I CAN HAVE A LINEAR GRADIENT AND AN IMAGE AND THEY OVERLAP
+
+        IF i have 2 images and I want to style, ex: repeat, I can do repeat-y, norepeat 
+
+        IF I DO BACKGROUND-SIZE: 100%, IT WILL PUT THE WHOLE THING
+
+
 
 
 
@@ -353,7 +480,7 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
 
                                                 ex: minmax(100px, 1fr) - defined one col at least 100px, but can grow to take up any remaining space
                                                                                     L> if there are 4 cols, 1fr is 1/4
-                                                                                    
+
                                                 ex: fit-content(40%) - this col will grow to git its content but will never go over 40% of grid width
                                                 ex: sub-grid - grid item inherits structure of parent, it will align the items with the grid lines of the parent
                                                 ex: masonry - automatically aranjes items to fill the gaps
@@ -584,6 +711,10 @@ CSS RESET- always reset
         padding: 0;
         box-sizing: border-box;
     }
+    img {
+        display: block; //removes the default padding and margin
+        }
+
 
     Consistency: Browsers apply their own default styles, which can vary. A reset helps standardize element appearance across different browsers.
 
