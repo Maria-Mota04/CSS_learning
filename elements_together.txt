@@ -24,7 +24,9 @@ FONT:(EVERYTHING INHERITED)
         the script and add to css)
 
     font-size (always use rems, remember forms wont inherit)
-    text-transform: how to capitalize an element's text(INHERITED)
+    font: font-size, font-family
+
+
 
     Opacity: degree to which content behind an element is hidden
    
@@ -422,6 +424,8 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
                     - flex-flow - flex-direction and flex-wrap
                         L> flex-wrap - nowrap(CAN OVERFLOW), wrap, wrap-reverse
 
+                    -flex-grow - specifies how much of the flex container's positive free space,
+                                     should be assigned to the flex item's main size.
 
                     - justify-content - distribution of space around items , along main axis(same as align but horizontal)
 
@@ -763,3 +767,60 @@ SHORTCUTS:
 
 --------------------------------------
 FORM ELEMENTS DO NOT INHERIT!!!! -> button, input etc
+
+
+----------------------------------------------
+MEDIA QUERIES:
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />// THIS PART OF HTML NECESSARY
+    
+    styles before still applied, unless overriden
+
+    I CAN GO TO INSPECT PAGE AND CLICK ON THE TOGGLE DEVICE TOOL TO SEE IT AS A MOBILE
+
+    sintax:
+    @media media type and (condition: breakout){
+        //CSS RULES
+    }
+
+    MEDIA TYPE - general category of a device(optional, all is implied, unless we use only)
+        L> all- for all devices
+        L> print - for documents to be seen in print mode
+        L> screen
+        L> speech: screen readers
+
+    CONDITION:
+        L> typical min-width
+        L> can stack conditions with and
+        L> orientation:
+            L> landscape: width greater than height, horizontal phone
+            L> portait: inverse
+        L> resolution:
+            L> min or max
+        L> aspect-ratio: ratio between width and height
+            L> min/max
+        L> color :Number of bits per color component
+            L> min/max
+        L> pointer:
+            L> none - no pointing device like mouse
+            L> coarse - pointing device limited accuracy(like touchscreen)
+            L> fine - high accuracy - like mouse
+
+        L> hover  
+            L> none- pointing device cannot hover
+            L> hover
+
+        L> light level: user environment is
+            L> dim - dark
+            L> normal - moderate
+            L> washed - bright
+
+        L>prefers-reduced-motion:
+            L> no preference
+            L> reduce
+
+        L> display-mode:
+            L> fullscreen
+            L> standalone 
+            L> minimal-ui 
+            L> browser
+

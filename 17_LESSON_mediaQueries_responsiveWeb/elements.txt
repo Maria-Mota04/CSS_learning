@@ -1,0 +1,54 @@
+MEDIA QUERIES:
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />// THIS PART OF HTML NECESSARY
+    
+    styles before still applied, unless overriden
+
+    I CAN GO TO INSPECT PAGE AND CLICK ON THE TOGGLE DEVICE TOOL TO SEE IT AS A MOBILE
+
+    sintax:
+    @media media type and (condition: breakout){
+        //CSS RULES
+    }
+
+    MEDIA TYPE - general category of a device(optional, all is implied, unless we use only)
+        L> all- for all devices
+        L> print - for documents to be seen in print mode
+        L> screen
+        L> speech: screen readers
+
+    CONDITION:
+        L> typical min-width
+        L> can stack conditions with and
+        L> orientation:
+            L> landscape: width greater than height, horizontal phone
+            L> portait: inverse
+        L> resolution:
+            L> min or max
+        L> aspect-ratio: ratio between width and height
+            L> min/max
+        L> color :Number of bits per color component
+            L> min/max
+        L> pointer:
+            L> none - no pointing device like mouse
+            L> coarse - pointing device limited accuracy(like touchscreen)
+            L> fine - high accuracy - like mouse
+
+        L> hover  
+            L> none- pointing device cannot hover
+            L> hover
+
+        L> light level: user environment is
+            L> dim - dark
+            L> normal - moderate
+            L> washed - bright
+
+        L>prefers-reduced-motion:
+            L> no preference
+            L> reduce
+
+        L> display-mode:
+            L> fullscreen
+            L> standalone 
+            L> minimal-ui 
+            L> browser
+
