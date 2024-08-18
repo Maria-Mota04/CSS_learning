@@ -54,7 +54,6 @@ header {
   border-radius: 5px;
   position: absolute;
   transition: all 0.5s;
-  left: -20px;
 }
 
 .menu-icon::before,
@@ -66,10 +65,10 @@ header {
 /*menu icon in column because body is column flow*/
 .menu-icon::before {
   /*-20px to line them up with the menu icon*/
-  transform: translate(20px, -12px);
+  transform: translate(-20px, -12px);
 }
 .menu-icon::after {
-  transform: translate(20px, 12px);
+  transform: translate(-20px, 12px);
 }
 
 /*just the middle line*/
