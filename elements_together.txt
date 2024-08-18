@@ -98,6 +98,8 @@ AROUND LINE:
     border-radius: only works with square images - 50% is a circle
         L>top-left, top-right, bottom-right, bottom-left
 
+    box-shadow: X and Y offsets relative to the element, blur and spread radius, and color.
+
 
 
 
@@ -855,6 +857,117 @@ PSEUDO CLASSES - keyword added to a selector that specifies a special state of t
 
 
 
+PSEUDO SELECTORS:
+    
+    pseudo-class(THEY USE ":"): selector that selects elements that are in a specific state   
+            ex: hover, focus, visited, link, active
+            different specific states
+
+            L> INPUT:relate to form elements, and enable selecting elements based on HTML 
+                        attributes and the state that the field is in before and after interaction.
+                        
+                L>autofill: when input has been autofilled
+                L> enabled: when user interface element is enabled
+                L> disabled: same but disabled
+                L> read-only: when an element cant be changed by the user
+                L> read-write: any user-editable
+                L> placeholder-shown: input element that has placeholder
+                L> default: UI elements that are default
+                L>checked: when elements like checkboxes are toggled on
+                L> indeterminate: UI elements in inderterminate states
+                L> blank: user input empty
+                L> valid: ex: email well filled
+                L> invalid: opposit
+                L> in-range: elements that are in range
+                L> out-of-range
+                L> required: when a form element is required
+                L> optional: when is optional
+                L> user-valid: element with correct input when user interacted with its
+                L>user invalid
+
+            L>LINGUISTIC
+                L>dir()
+                L> lang()
+
+            L>LOCATION
+                L> any-link: link or visited
+                L> link
+                L> visited
+                L> local-link: absolute URL same as target URL
+                L> target: element which is the target URL, last element selected
+                L>target-within: elements that are targets and descendants
+                L> scope: elements that are reference point for selectors
+
+            L>RESOURCE STATE 
+                L>playing
+                L>paused
+
+            L>TIME dimensional
+                L> current
+                L>past 
+                L> future
+
+            L> TREE STRUCTURAL
+                L> root: usually html
+                L> empty: element with no children other than whitespaces
+                L> nth-child, nth-last-child, first-child, last-child, only-child,
+                                     ---> LOOKS FOR THE HTML ORDER, DOESNT MATTER THE ORDER ATTRIBUTE
+                         nth-of-type(element that match a certain type), nth-last-of-type(same but down up)
+                L> first-of-type
+                L>last-of-type
+                L> only-of-type
+
+            L>USER ACTION
+                L>hover,active,focus
+                L>focus-visible
+                L>focus-within
+            L>FUNCTIONAL
+                L>is(): any element that matches any of the selectors in the list provided- BE CAREFUL
+                                THIS WILL UP THE SPECIFITY IN ALL THE MEMBERS IF THERE IS EVEN JUST ONE MEMEBER
+                                WITH HIGH SPECIFITY
+                L>not(): represents any element that is not represented by its argument.
+                L>where(): same as last but easily overriden, less specifity
+                L>has(): element if any of the relative selectors match when anchored against the attached element.
+
+    pseudo-elements(THEY USE "::): act like you have added a new html element
+
+            USUALLY USED WITH CONTENT: ....
+
+
+            ex: before, after, first-line, first-letter, selection, placeholder, marker, backdrop, aprt, sloted
+
+            L> after:  last child of the selected element, inline, usuallly used with content
+            L>before: same but before
+            L> backdrop: used to style the backdrop of an element,
+                         for dialog and fullscreen elements when active
+            L> cue: for track elements within video and audio, subtitles or captions
+            L> cue():  retrieve the current cue or text track information 
+
+            L> file-selector-button: button of input or type file
+            L>first-letter: first letter, first line
+            L> first-line: first line
+            L>grammar-error:  text segment which the user agent has flagged as grammatically incorrect.
+            L> hightlight(): styles to costum highlight
+            L> marker: ALREADY DEFINED BELLOW
+            L> part(): any element within a shadow tree that has a matching part attribute.
+            L> placeholder
+
+            L> selection: art of a document that has been highlighted by the user 
+            L> slotted(): element that has been placed into a slot inside an HTML template
+            L>spelling-error
+            L>target-text: text that has been scrolled to if the browser supports text fragments
+            L>view-transition: contains all view transition snapshot groups and sits over the top of all other page content.
+            L> view-transition-image-pair(): "old" and "new" view states 
+            L>view-transition-group():  single view transition snapshot group.
+            L>view-transition-new(): AFTER TRANSITION
+            L>view-transition-old()
+
+
+
+NOTE:
+    EX: .card img[alt] selecting the imgs with the alt ATTRIBUTTE
+
+
 
 -----------------------------------
 SHORTCUTS:
@@ -864,6 +977,8 @@ SHORTCUTS:
     I can type anything like p, link etc if i tab they will appear
 
     .block.right -> creates a div with 2 classes ("block right")
+
+    .name*12: creates 12 divs with name class
 
 
 --------------------------------------
@@ -924,4 +1039,6 @@ MEDIA QUERIES:
             L> standalone 
             L> minimal-ui 
             L> browser
+
+        L> prefers-color-scheme: dark or light mode
 

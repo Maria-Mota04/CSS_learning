@@ -1,0 +1,15 @@
+VARIABLES:
+
+    to add css variables, add a :root pseudo-class, eveything inherits from it
+    syntax:
+
+    :root{
+        --VARIABLE: ...
+    }
+
+    then to add the the general css
+
+    var(--VARIABLE)
+
+    redifining:
+    I can do --variable: changed; inside a specific class, and it only applies to that class
