@@ -78,13 +78,14 @@ TEXT:
 
     white-space: how white space inside an element is handled.(INHERITED)
         L> normal(multiple spaces collapsed, same as newlines, text make to fill the box), 
-            nowrap(same but no newlines), pre(newline and spaces preserved, text wont wrap, it can overflow, good for poems),
+            nowrap(same but no newlines, if there is a linebreak, the name with space wont break),
+                |             pre(newline and spaces preserved, text wont wrap, it can overflow, good for poems),
                 L>when I dont want text to separate
             pre-wrap(same as pre, but will break lines to fill boxes, unless its spaces),
             pre-line(same as pre-wraped but collapses sequences of white spaces),
             break-spaces(SIMILAR TO PRE-WRAP,preserves whitespaces, wraps, can break spaces if needed to fill box)
 
-
+    NOTE: ---> IF I DONT WANT A NAME TO BREAK I DO FIRSTNAME <SPAN class = "nowrap">LAST NAME WITH SPACE</SPAN>
 
 
 AROUND LINE:
@@ -204,8 +205,33 @@ img(NOT INHERITED)
         L> background-clip: same as last
                 L> if its text, I can down the colors transparency and i can see the image under
 
+        -SCROLLBAR
+        L>-scrollbar,-scrollbar-thumb, -scrollbar-track, -scrollbar-button(arrow at the ends), 
+                -scrollbar-corner(intersection of vertical and horizontal scrollbars)
+
     
-    CHECK SCROLLBARS STYLING
+    SCROLLBAR:
+    scrollbar-width:  thickness of the scrollbar.
+        L> auto, thin, none
+
+    scrollbar-color: scrollbar's track and thumb.
+        L> thumb-color, track-color
+        L> auto
+
+    scrollbar-gutter: Reserves space for a scrollbar, even if it's not present, to prevent layout shifts.
+        L>atuo, stable, both-edges(space for horizontal and vertical)
+
+        RELATED:
+
+        overflow: visible(content not clipped, overflows),
+                 hidden(content clipped and not scrollable),
+                  scroll(scrollbars added)
+                   auto(same as last but only in need)
+
+        scroll-behaviour: auto(instant), smooth --> PUT IN HTML{}
+
+
+
         
 
 
@@ -646,6 +672,76 @@ TRANSFORM(NOT INHERITED)
     L> takes one or mor transform func or none
 
 
+
+FUNCTIONS:
+
+    rgb,rbga,hsl,hsla, hex, hwb, lab, lch
+    color-mix: mixes 2 colors
+
+    transform:
+        translate, translateX, translaeY, translateZ
+
+        scale,...
+
+        rotate, ...
+
+        skew, skewX, skewY = inclinar
+
+        matrix, matrix3d: applies a transformation, using a matrix of values
+
+        perspective: adds perspective to a 3d transformed element
+
+    filter:
+        blur 
+        brightness
+        contrast
+        drop-shadow
+        gray-scale
+        hue-rotate
+        invert: inverts colors
+        Opacity
+        saturate
+        sepia: adds sepia effect
+
+    background:
+        linear,radial,conic,reapeating-linear,repeating-radial ---> gradient
+
+    clip-path(shape funcs):
+        inset(defined inset triangle)
+        circle
+        ellipse
+        polygon
+
+    transition-timing-function
+        cubix-bezier: costum timing func for animations
+        steps: defines steps of animation
+
+    url
+
+    content: 
+        attr(data): returns the value of an attribute of the item
+        counter
+    
+    width:
+        calc: determine the value ex: 100% - 50px -> lets us mix units
+        min: ex: 100%, 500px - will be one of the smaller, 100% or 500px
+        max: same but for max
+
+    font-size:
+        clamp: set a value within a range, ex: clamp(1rem, 2vw, 2rem), the value will be 2vw
+                                         but will never be smaller than 1rem or larger than 2rem
+
+    color:
+        var: insert the value of a costum property: ex: --main-color: #3498db, var(--main-color)
+
+    padding:
+        env: acess env variables
+    
+
+
+
+
+
 JS 
 
     if I have .menu.is-active, I can build a js function that activates the .menu and gets those styles
@@ -717,6 +813,9 @@ CSS RESET- always reset
     }
     img {
         display: block; //removes the default padding and margin
+        //So it wont overflow
+        max-width: 100%;
+        height: auto;
         }
 
 
