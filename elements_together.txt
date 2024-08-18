@@ -694,7 +694,25 @@ TRANSFORM(NOT INHERITED)
     L>scaleX, stretches horizontally, if less 100%, it shrinks
     L> skew - inclinates
 
+    L>transform-origin: sets the origin for an element's transformations.
+        L> center, top left, 50 px.. (x y z)
+    L> transform-style: sets whether children of an element are positioned in
+                             the 3D space or are flattened in the plane of the element.
 
+                L> flat, preserve-3d
+
+    L> transform-box: S determines the reference box used by the transform and transform-origin properties when applying 
+                    transformations like rotate, scale, skew, or translate to an element.
+        L> content-box: Uses the content area of the element as the reference box. This means the transformation 
+                    is applied relative to the inner area, excluding padding, borders, and margins.
+
+        L> border-box: Uses the element's border box as the reference. 
+                    This includes the content, padding, and borders.
+
+        L> fill-box: Primarily used with SVG elements, 
+            it references the area that contains the element's graphical content.
+
+        L> view-box: Also used with SVG elements, it refers to the entire viewBox of the SVG.
 
 FUNCTIONS:
 
@@ -848,6 +866,10 @@ BUTTONS:
     automatically come with the tab for focus mode
 
     should reset background-color to transparent and border to none
+
+    titles in buttons appear when we hover
+
+    tabindex = -1, wont have focus if someone tabs through
     
 
 
@@ -1026,9 +1048,12 @@ PSEUDO SELECTORS:
                 L> only-of-type
 
             L>USER ACTION
-                L>hover,active,focus
-                L>focus-visible
-                L>focus-within
+                L>hover,active,focus-  When an element is "focused," it means that
+                                     the browser is paying attention to it, and any actions you take
+                L>focus-visible- style elements that receive focus, but only when it's appropriate to show a focus indicato
+                L>focus-within-  applies styles to an element when it, or
+                             any of its descendants (children, grandchildren, etc.), have received focus.
+
             L>FUNCTIONAL
                 L>is(): any element that matches any of the selectors in the list provided- BE CAREFUL
                                 THIS WILL UP THE SPECIFITY IN ALL THE MEMBERS IF THERE IS EVEN JUST ONE MEMEBER
@@ -1170,3 +1195,31 @@ VARIABLES:
     I can do --variable: changed; inside a specific class, and it only applies to that class
 
 -------------------------------------------------
+
+
+DOM(document object model)
+
+ API that represents and interacts with any HTML or XML-based markup language document. ç
+
+
+ DOM is a document model loaded in the browser and representing the document as a node tree
+        , or DOM tree, where each node represents part of the document
+         (e.g. an element, text string, or comment).
+
+
+--------------------------------------------------
+
+ADJACENT SIBLING-  element that is immediately next to another
+             element in the DOM (Document Object Model) tree, sharing the same parent.
+
+    L> combinator (+) is used to select the element that comes directly after a specified element.
+
+    ex: h1 + p {
+  color: blue;  //In this example, any <p> element 
+                    that immediately follows an <h1> element will be styled with blue text.
+}
+
+
+SELECT ALL SIBLINGS, same but with ~
+
+
