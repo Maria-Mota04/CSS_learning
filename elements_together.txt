@@ -342,6 +342,8 @@ CONTENT(NOT INHERITED)
     content: normal-> allows the pseudo-element to be generated but doesnt display anything(reset)
 
     content: linear-gradient- to add it to the pseudo-element
+    content: open-quote, close-quote, no-open-quote,no-close-quote (to add quotes to a text)
+
     background: image-set( url("image1x.png") 1x, url("image2x.png") 2x); /* Different images for different pixel densities, different resolutions */
     ....
 
