@@ -870,7 +870,6 @@ BUTTONS:
     titles in buttons appear when we hover
 
     tabindex = -1, wont have focus if someone tabs through
-    
 
 
 
@@ -984,6 +983,15 @@ PSEUDO CLASSES - keyword added to a selector that specifies a special state of t
     ---> ::MARKER-  selects the marker box of a list item, which typically contains a bullet or number. 
                 L> fonts, white-space, color, text-combine-upright, unicode-bidi, direction, content,
                     animation, transition
+
+    :checked: This targets an element that is currently 
+            in a checked state, like a checked checkbox or radio button.
+
+    
+    :valid is used to apply 
+        styles to form elements that are valid according to their validation constraints.
+    :invalid, :focus-invalis
+
 
 
 
@@ -1119,6 +1127,8 @@ FORM ELEMENTS DO NOT INHERIT!!!! -> button, input etc
 
 html: to add costum attributes that dont affect presentation or functionality: data- (can be used with javascript)
 
+html: input- required: is used to indicate that an input field must be filled out before submitting a form. 
+    pattern: to force an input to have a certain pattern
 
 ----------------------------------------------
 MEDIA QUERIES:
@@ -1220,6 +1230,25 @@ ADJACENT SIBLING-  element that is immediately next to another
 }
 
 
+/*example: article + article, of 3 articles only 
+    selects the last 2 because the first doesnt have any article behind it*/
+
+
 SELECT ALL SIBLINGS, same but with ~
 
 
+CHILD COMBINATOR:
+    .nav__menu > .nav__item:first-child: This targets the first child element with the class
+         .nav__item that is a direct child of an element with the class .nav__menu.
+
+
+-------------------------------------
+HAS: see example from the article above
+
+now I can use article:has(+article): and it will select the first two, sees the next one
+article + article, of 3 articles only //selects the first 2
+
+/*will select only what that article has in bold*/
+article:has(span) .bold {
+  color: red;
+}
