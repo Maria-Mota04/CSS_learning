@@ -457,6 +457,8 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
                     -flex-grow - specifies how much of the flex container's positive free space,
                                      should be assigned to the flex item's main size.
 
+                                -> flex-grow: 1 extends to the full visible page
+
                     - justify-content - distribution of space around items , along main axis(same as align but horizontal)
 
                     - gap(spacing) - space between columns
@@ -608,6 +610,8 @@ POSTION: sets how an element is positioned in a document. (NOT INHERITED)
             L> space for the element same as static
             L> z-index usable
 
+            L>>>>> if i create this usually means ill have something absolute inside
+
     ABSOLUTE -> removed from the normal flow
             L> no space created for the element, SO OTHER ELEMENTS ACTS AS IF IT DID NOT EXIST
             L> position relative to the closest ancestor or initial containing block
@@ -664,16 +668,31 @@ POSTION: sets how an element is positioned in a document. (NOT INHERITED)
 TRANSITION(NOT INHERITED)
 
     L> property(which property should be animated, can be any property, even transform),
-     duration(how long it lasts),
-    timing-function(speed of the curve),
-     delay(delay before it starts), 
-     behaviour
+     duration(how long it lasts), 
 
-     L> YOU PUT TRANSITION IN THE NORMAL ELEMENT, THE PSEUDO CLASS HAS THE AFTER VALUE
+    L>timing-function(speed of the curve)- default is ease(starts slow and speeds up and slows down)
+            L> linear - even pace
+
+    L> delay(delay before it starts), 
+
+    L> behaviour
+
+    L> YOU MAY HAVE TO PUT TRANSITION IN THE NORMAL ELEMENT, THE PSEUDO CLASS HAS THE AFTER VALUE
+
+
+    NOTE: --> YOU MAY PUT MANY SEPARATED BY ,
+
 
 TRANSFORM(NOT INHERITED)
     L>lets you rotate, scale, skew, or translate an element. Modifies the coordinate space.
-    L> takes one or mor transform func or none
+    L> takes one or more transform func or none
+    L> if I user % it will base it on the size of the div
+
+    L> rotateX, rotates using the x axis, if i rotateX(90deg) it disappears
+    L> rotateZ works like a clock <=> rotate
+
+    L>scaleX, stretches horizontally, if less 100%, it shrinks
+    L> skew - inclinates
 
 
 
@@ -952,7 +971,7 @@ PSEUDO SELECTORS:
 
     pseudo-elements(THEY USE "::): act like you have added a new html element
 
-            USUALLY USED WITH CONTENT: ....
+            MANDATORY TO HAVE CONTENT EVEN IF "", OTHERWISE WONT BE GENERATED AND STYLES WONT APPLY
 
 
             ex: before, after, first-line, first-letter, selection, placeholder, marker, backdrop, aprt, sloted

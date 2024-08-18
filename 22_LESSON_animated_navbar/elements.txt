@@ -1,0 +1,65 @@
+ANIMATION:(NOT INHERITED)
+
+    1º is naming the animation
+
+    animation-name: ....
+
+    2º for the animation to work WE NEED TO DEFINE KEYFRAMES
+        @keyframe animationName{
+            0%{ //beggining
+                transform ...
+            }
+        }
+
+
+    -name: specifies the names of one or more 
+                @keyframes at-rules that describe the animation to apply to an element.
+
+    -duration-timing-function
+    -delay
+    -iteration-count: sets the number of times an animation sequence should be played before stopping.
+        L> CAN HAVE INFINIT
+
+    -direction :  sets whether an animation should play forward, backward, 
+                        or alternate back and forth between playing the sequence forward and backward.
+        L> normal: each time it resets, goes from start to end
+        L>reverse: same but end to start
+        L> alternate: each time it resets, it inverts the order(start-end/end-start)
+        L>alternate-reverse: same but starts end-start
+
+    -fill-mode: how a CSS animation applies styles to its target before and after its execution.
+        L> none: animation wont apply styles when its not executing
+        L> forwards: target will retain values by the last keyframe from the animation
+        L>backwards: same but with the first
+        L>both: will extend the properties both ways
+
+    -play-state: y sets whether an animation is running or paused.
+        L> paused
+        L>running
+
+    -timeline: specifies the timeline that is used to control the progress of a CSS animation.
+        1. Default Values
+
+            none: The animation does not use any timeline, so it is effectively disabled.
+            auto: Uses the default timeline, which is the document’s standard time-based timeline. This is the default behavior for CSS animations.
+
+        2. Anonymous Timelines
+
+            scroll(): This function provides a scroll-based timeline. It creates a timeline that progresses as you scroll through a specified scrollable element (scroller). The scrolling axis (horizontal or vertical) and the scroller are specified as arguments.
+
+            Example: animation-timeline: scroll(left); would create a scroll-based timeline that tracks horizontal scrolling.
+            view(): This function creates a timeline based on the visibility of an element within a scrollable area. It progresses as the element becomes visible and then invisible within its parent scrollable container.
+
+            Example: animation-timeline: view(top 20px); would create a timeline based on the vertical visibility of the element with a 20px inset from the top.
+
+        3. Named Timelines
+
+            <dashed-ident>: Represents a named timeline that was previously defined using scroll-timeline-name or view-timeline-name.
+            Example: animation-timeline: --myScrollTimeline; uses a previously defined scroll timeline with the name --myScrollTimeline.
+
+
+
+BUTTONS:
+    automatically come with the tab for focus mode
+
+    should reset background-color to transparent and border to none
