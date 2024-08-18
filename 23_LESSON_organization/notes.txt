@@ -1,0 +1,14 @@
+
+BEM- block element modifier
+
+block = components
+
+modifiers: for incremental changes, blocks with differences (IMPORTANT -- 2 dashes)
+    L> you dont replace the original class, you add it
+
+
+- elements that are dependent on a class name, name__name2
+- modifiers: name--name2
+
+
+- THIS HELPS TO KEEP SPECIFITY
