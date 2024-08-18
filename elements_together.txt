@@ -1130,6 +1130,10 @@ html: to add costum attributes that dont affect presentation or functionality: d
 html: input- required: is used to indicate that an input field must be filled out before submitting a form. 
     pattern: to force an input to have a certain pattern
 
+
+-Hero section, part of the page with a big image or attention getter
+
+
 ----------------------------------------------
 MEDIA QUERIES:
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />// THIS PART OF HTML NECESSARY
