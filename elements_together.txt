@@ -725,21 +725,42 @@ FUNCTIONS:
     content: 
         attr(data): returns the value of an attribute of the item
         counter
+
+        ex: <span class="tooltip" data-tooltip="This is Latin">Lorem</span>
+            css:
+            .tooltip:hover::before {
+                /*now this data-tooltip(this is latin) appears before the word when I hover*/
+                content: attr(data-tooltip);
+                }
+
     
     width:
         calc: determine the value ex: 100% - 50px -> lets us mix units
-        min: ex: 100%, 500px - will be one of the smaller, 100% or 500px
+        min: ex: 2.25rem, 3Vh - will be one of the smaller, 100% or 500px -> choose 
+                                                                        one absolute(maximum) 
+                                                                        and one variable
+                                                            -> BETTER TO CHOOSE VH FOR FONTS
         max: same but for max
+                -> absolute value is the smallest
+                -> VH FOR FONTS
+
+        NOTE: CLAMP IS BETTER THAN THIS
 
     font-size:
         clamp: set a value within a range, ex: clamp(1rem, 2vw, 2rem), the value will be 2vw
                                          but will never be smaller than 1rem or larger than 2rem
+
+            -> (minimal, ideal, maximum)
 
     color:
         var: insert the value of a costum property: ex: --main-color: #3498db, var(--main-color)
 
     padding:
         env: acess env variables
+
+
+    GRID SPECIFIC:
+        minmax- provides a min and a max for the grid-template
     
 
 
@@ -984,6 +1005,8 @@ SHORTCUTS:
 --------------------------------------
 FORM ELEMENTS DO NOT INHERIT!!!! -> button, input etc
 
+html: to add costum attributes that dont affect presentation or functionality: data- (can be used with javascript)
+
 
 ----------------------------------------------
 MEDIA QUERIES:
@@ -1042,3 +1065,21 @@ MEDIA QUERIES:
 
         L> prefers-color-scheme: dark or light mode
 
+------------------------------------------------
+VARIABLES:
+
+    to add css variables, add a :root pseudo-class, eveything inherits from it
+    syntax:
+
+    :root{
+        --VARIABLE: ...
+    }
+
+    then to add the the general css
+
+    var(--VARIABLE)
+
+    redifining:
+    I can do --variable: changed; inside a specific class, and it only applies to that class
+
+-------------------------------------------------
