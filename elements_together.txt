@@ -69,7 +69,7 @@ TEXT:
     text-indent: (GOOD FOR EM): indents the first line (INHERITED)
 
     line-height: number | length | percentage | normal, distance between lines (INHERITED)
-        L> default 1.2
+        L> default 1.2, should not have units
 
     letter-spacing: spacing between text-chars (INHERITED)
         L> px, rem, normal... (better to use em's)
