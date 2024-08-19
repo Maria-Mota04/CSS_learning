@@ -939,11 +939,13 @@ The cascade in CSS determines how these styles interact, with inline styles typi
 -------------------------------
 CSS RESET- always reset
 
-    *{
-        margin: 0;
+    *,
+    *::before,
+    *::after {
         padding: 0;
+        margin: 0;
         box-sizing: border-box;
-    }
+        }
     img {
         display: block; //removes the default padding and margin
         //So it wont overflow
@@ -1132,6 +1134,8 @@ html: input- required: is used to indicate that an input field must be filled ou
 
 
 -Hero section, part of the page with a big image or attention getter
+
+- /#menu, takes me to the home page, to the menu section
 
 
 ----------------------------------------------
