@@ -607,6 +607,11 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
 
                         If I say grid-column-end: -1 its the first col of the right
 
+
+            SUPER IMPORTANT::::
+            NOTE: GRID NEEDS A FLAT STRUCTURE, SHOULDNT BE USED ON TABLES DIRECTLY, WRAP IN A DIV
+                    AND THE TABLE WILL DISPLAY: GRID
+                    
         RUBY -> ....
 
 
