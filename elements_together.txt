@@ -426,6 +426,8 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
             CONTENTS: the element will disappear and its children will be rendered as if they
                     are put directly under their "grandparent"- SO THE ELEMENT ITSELF WONT TAKE SPACE
 
+                    -> TAKES THEM OUT OF THE FLOW
+
             BLOCK FLOW-ROOT: block level element + new formatting context
             (preventing floated children escaping parents container)
 
@@ -609,8 +611,16 @@ DISPLAY:(NOT INHERITED) -> sets whether an element is treated as a block or inli
 
 
             SUPER IMPORTANT::::
-            NOTE: GRID NEEDS A FLAT STRUCTURE, SHOULDNT BE USED ON TABLES DIRECTLY, WRAP IN A DIV
-                    AND THE TABLE WILL DISPLAY: GRID
+            NOTE: GRID NEEDS A FLAT STRUCTURE, SHOULDNT BE USED ON TABLES DIRECTLY
+                    THE TABLE WILL DISPLAY: CONTENTS, WILL IGNORE THE PARENT
+
+                in an example I have in the project:
+                /*cant use grid directly to a table, I need to flatten it*/
+                /*display: contents = makes the table a grid,
+
+                we will display: contents in the table head, tr, tbody, tfoot, so grid ignores those, 
+                the content we want for the grid will be inside the th and td
+                */
                     
         RUBY -> ....
 
@@ -999,7 +1009,7 @@ CSS RESET- always reset
         }
 
     /*forms dont inherit*/
-    input, button textarea{
+    input, button, textarea{
         font: inherit
     }
 

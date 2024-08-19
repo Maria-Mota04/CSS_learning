@@ -21,3 +21,17 @@ https://symbl.cc/en/
 
 for flex-box learning:
 https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmJaZ3BlZkp1cG5HbEZaMzJsOWhlZG5OWmdiQXxBQ3Jtc0trOFNtREdSR01GZjc0UGVyb3hyZGRrd3NlQXB1cF9YZHJvWUp2UEYwaHFsVTU2OU1ONDFlbS1yRkNiN2lJcHBHQUJaLURrTGM4V1pRZ2IzVU42S2VoLXBvbGQ5cjJ5RmdwUUFHMmpWNWpsN2FEd3VBbw&q=https%3A%2F%2Fflexboxfroggy.com%2F&v=B8BFVzbKmPI
+
+
+can I use webpage:
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqblZZZVVscm9ERWtlSG1wMFZ2NnBPMW1PdFBrQXxBQ3Jtc0tscHZ5M1hVTDctYXdRZWRmU0QzVjNfMTFUSnhod3lMc2d4b0FUb1VneDNJZzZQQUtMSXc5MHVpbDNvRVZVQVZnRldNajd0NG1tYjh2b2NvRUpLaTV1cDRiU3JjTFREMk9WQXk3NDBOUExVVGQ5c3FfVQ&q=https%3A%2F%2Fcaniuse.com%2F%3Fsearch%3Ddisplay%253A%2520contents&v=cMN2Odm5ieA
+
+
+
+
+
+DANGER
+gridflattening:
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbEprM2k0a1dSZnBUbWpEX05ZVTRrSkxvUWR2Z3xBQ3Jtc0tuVlJsVXcwR3dRbnhFdFRkX2dILThqSjd1SzNneUZLMDJsdDFUY0dhdTlDZkFuQTFVWHJyak9ZRGhMUjBGTUx5QWtDSlN4MlFuT3dkb1cwRGdUMDJ4WUVsUFN3eFpxNC1uLXplbXpLRkhsQllFNXRUdw&q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FCSS%2FCSS_Grid_Layout%2FCSS_Grid_Layout_and_Accessibility%23grid_and_the_danger_of_markup_flattening&v=cMN2Odm5ieA
+
+
