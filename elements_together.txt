@@ -72,7 +72,7 @@ TEXT:
         L> default 1.2
 
     letter-spacing: spacing between text-chars (INHERITED)
-        L> px, rem, normal...
+        L> px, rem, normal... (better to use em's)
     
     word-spacing: same as last, but for words (INHERITED)
 
