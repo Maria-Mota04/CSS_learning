@@ -953,6 +953,10 @@ CSS RESET- always reset
         height: auto;
         }
 
+    /*forms dont inherit*/
+    input, button textarea{
+        font: inherit
+    }
 
     Consistency: Browsers apply their own default styles, which can vary. A reset helps standardize element appearance across different browsers.
 
