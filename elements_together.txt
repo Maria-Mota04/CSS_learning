@@ -232,6 +232,43 @@ img(NOT INHERITED)
 
         scroll-behaviour: auto(instant), smooth --> PUT IN HTML{}
 
+        scroll-snap-type: sets how strictly snap points are enforced
+                         on the scroll container in case there is one.
+
+                L>none
+                L> x( scroll container snaps to snap positions in its horizontal axis only.)
+                L> y(same but for y)
+                L> block(The scroll container snaps to snap positions in its block axis only.)
+                L> inline(the scroll container snaps to snap positions in its inline axis only.)
+                L> both(both axis)
+                L>mandatory(visual viewport of this scroll container must snap to a
+                             snap position if it isn't currently scrolled.)
+
+                L> proximity(ay snap to a snap position if it isn't currently scrolled. 
+                            The user agent decides if it snaps or not based on scroll parameters.)
+
+        scroll-snap-position: specifies the box's snap position as an alignment of its snap area 
+                L>none, center, start, end
+
+        scroll-margin-top: When you apply this to an element, say, a heading, if you click on a link that anchors to this heading, 
+        there will be a x space between the top of the viewport and the heading.
+
+        scroll-timeline: a named scroll progress timeline, which 
+                        is progressed through by scrolling a scrollable element
+                         (scroller) between top and bottom (or left and right). 
+
+                L>scroll-timeline-name- none or costum
+                L>scroll-timeline-axis- pecify the scrollbar direction that will be used to provide the timeline for a named scroll progress timeline animation, 
+
+                        L> block- perpendicular to flow text
+                        L> inline- horizontal to flow text
+                        L> x, y
+
+        scroll-margin, scroll-padding
+
+
+
+
 
 
         
@@ -859,6 +896,9 @@ ANIMATION:(NOT INHERITED)
 
             <dashed-ident>: Represents a named timeline that was previously defined using scroll-timeline-name or view-timeline-name.
             Example: animation-timeline: --myScrollTimeline; uses a previously defined scroll timeline with the name --myScrollTimeline.
+
+
+    
 
 
 
