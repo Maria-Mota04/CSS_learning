@@ -1308,6 +1308,10 @@ CHILD COMBINATOR:
     .nav__menu > .nav__item:first-child: This targets the first child element with the class
          .nav__item that is a direct child of an element with the class .nav__menu.
 
+    -> GOOD TO TARGET DIRECT CHILDREN AND NOT NESTED
+    ex: parent > child, only targets child
+        parent child, will target all the 'child' classes inside parent
+
 
 -------------------------------------
 HAS: see example from the article above
