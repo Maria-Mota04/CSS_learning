@@ -98,6 +98,17 @@ AROUND LINE:
     border-radius: only works with square images - 50% is a circle
         L>top-left, top-right, bottom-right, bottom-left
 
+
+    border-block:  A shorthand to set the top and bottom borders in one line.
+        L>[border-width] [border-style] [border-color];
+
+    border-spacing: property controls the space between the borders of adjacent cells in a table when the borders are not collapsed.
+        L> horizontalspacing, verticalspacing
+
+    border-collpase: determines whether the borders of adjacent cells are merged into a single border or remain separated.
+        L> separate
+        L>collapsed
+
     box-shadow: X and Y offsets relative to the element, blur and spread radius, and color.
 
 
