@@ -99,7 +99,7 @@ AROUND LINE:
         L>top-left, top-right, bottom-right, bottom-left
 
 
-    border-block:  A shorthand to set the top and bottom borders in one line.
+    border-block:  A shorthand to set the top and bottom borders in one line.git push origin main
         L>[border-width] [border-style] [border-color];
 
     border-spacing: property controls the space between the borders of adjacent cells in a table when the borders are not collapsed.
